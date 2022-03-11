@@ -3,27 +3,28 @@ import { Button } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
 
-const StyledButton = styled(Button)(({ theme }) => ({
-  borderColor: "#009CCD",
-  borderWidth: 2,
-  borderStyle: "solid",
-  width: "107px",
-  height: "38px",
-  borderRadius: "19px",
+const StyledButton = styled(Button)`
+  border-Color: #009CCD;
+  border-Width: 2;
+  border-Style: solid;
+  width: 107px;
+  height: 38px;
+  border-Radius: 19px;
 
-  fontSize: "14px",
-  color: "#2D9FC3",
-  letterSpacing: "0.5px",
-  textAlign: "center",
-  fontWeight: "bold",
-  textTransform: "uppercase",
+  font-Size: 14px;
+  color: #2D9FC3;
+  letter-Spacing: 0.5px;
+  text-Align: center;
+  font-Weight: bold;
+  text-Transform: uppercase;
 
-  "&:hover": {
-    borderWidth: 2,
-    borderColor: "#009CCD",
-    boxShadow: "none",
-  },
-}));
+  &:hover {
+    border-Width: 2;
+    border-Color: #009CCD;
+    box-Shadow: none;
+  }
+`
+  
 
 const StyledLink = styled(Link)`
   text-decoration: none;

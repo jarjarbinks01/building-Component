@@ -3,37 +3,41 @@ import styled from "@emotion/styled";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 
-const StyledButton = styled(Button)((theme) => ({
-  color: "#42526E",
-  width: "160px",
-  display: "flex",
-  justifyContent: "flex-start",
+const StyledButton = styled(Button)`
+  color: #42526e;
+  width: 160px;
+  display: flex;
+  justify-content: flex-start;
 
-  "&:focus": {
-    color: "#EF841F",
-    "&:hover, &.Mui-focusVisible": {
-      borderWidth: 2,
-      borderRadius: "5px",
-      boxShadow: "none",
-      color: "#FFF",
-    },
-  },
-  "&:hover, &.Mui-focusVisible": {
-    borderWidth: 2,
-    borderRadius: "5px",
-    backgroundColor: "#EF841F",
-    boxShadow: "none",
-    color: "#FFF",
-  },
-}));
+  &:focus {
+    color: #ef841f;
+    &:hover,
+    &.Mui-focusVisible {
+      border-width: 2;
+      border-radius: 5px;
+      box-shadow: none;
+      color: #fff;
+    }
+  }
+  &:hover,
+  &.Mui-focusVisible {
+    border-width: 2;
+    border-radius: 5px;
+    background-color: #ef841f;
+    box-shadow: none;
+    color: #fff;
+  }
+`;
 
-const StyledSvgContainer = styled("div")(() => ({
-  display: "flex",
-  alignItems: "center",
-  fill: "currentcolor",
-}));
+const StyledSvgContainer = styled.div`
+    display: flex;
+  align-Items: center;
+  fill: currentcolor;
 
-const StyledText = styled("div")`
+`
+  
+
+const StyledText = styled.div`
   flex: 0;
   line-height: 17px;
 `;

@@ -3,23 +3,23 @@ import { Button } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
 
-const StyledButton = styled(Button)(({ theme }) => ({
-  backgroundColor: "#EF841F",
-  width: "107px",
-  height: "38px",
-  borderRadius: "19px",
-  padding: 0,
+const StyledButton = styled(Button)`
+  background-Color: #EF841F;
+  width: 107px;
+  height: 38px;
+  border-Radius: 19px;
+  padding: 0;
 
-  fontSize: "14px",
-  textAlign: "center",
-  letterSpacing: "0.5px",
-  textTransform: "uppercase",
+  font-Size: 14px;
+  text-Align: center;
+  letter-Spacing: 0.5px;
+  text-Transform: uppercase;
 
-  "&:hover": {
-    backgroundColor: "#EF9F1F",
-    boxShadow: "none",
-  },
-}));
+  &:hover {
+    background-Color: #EF9F1F;
+    box-Shadow: none;
+  }
+`
 
 const StyledLink = styled(Link)`
   text-decoration: none;

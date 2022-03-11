@@ -3,16 +3,16 @@ import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
 
-const StyledButton = styled(Button)(({ theme }) => ({
-  backgroundColor: "#e1893b",
-  width: "100px",
-  borderRadius: 20,
+const StyledButton = styled(Button)`
+  background-color: #e1893b;
+  width: 100px;
+  border-radius: 20px;
 
-  "&:hover": {
-    backgroundColor: "#f78e33",
-    boxShadow: "none",
-  },
-}));
+  &:hover {
+    background-color: #f78e33;
+    box-shadow: none;
+  }
+`;
 
 const StyledLink = styled(Link)`
   text-decoration: none;
@@ -20,12 +20,11 @@ const StyledLink = styled(Link)`
 
 const PrimaryButton = ({ text }: { text: string }) => {
   return (
-    
-      <StyledLink to="/">
-        <StyledButton type="submit" variant="contained" disableElevation>
-          {text}
-        </StyledButton>
-      </StyledLink>
+    <StyledLink to="/">
+      <StyledButton type="submit" variant="contained" disableElevation>
+        {text}
+      </StyledButton>
+    </StyledLink>
   );
 };
 

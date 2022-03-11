@@ -4,12 +4,11 @@ import employer from '../../assets/icons/Employer.svg'
 import styled from "@emotion/styled";
 
 
-const StyledIconButton = styled(IconButton)((theme) =>({
-    width: '50px',
-    height: '50px',
+const StyledIconButton = styled(IconButton)`
+    width: 50px;
+    height: 50px;  
+`
 
-    
-}));
 
 const IconImage = styled.img`
 `
