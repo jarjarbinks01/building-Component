@@ -17,14 +17,14 @@ const StyledPlaceHolder = styled.div`
   color: #9D9D9D;
 `;
 
-const SelectField = ({ control, label, name, id, data }: SelectFieldProps) => {
+const SelectField = ({ control, label, name, id, data, placeholder }: SelectFieldProps) => {
   const [input, setInput] = useState("");
 
   console.log(input)
 
   return (
     <StyledContainer>
-      <StyledLabel id={id}>{label}</StyledLabel>
+      <StyledLabel>{label}</StyledLabel>
       <Controller
         name={name}
         control={control}
@@ -39,7 +39,7 @@ const SelectField = ({ control, label, name, id, data }: SelectFieldProps) => {
             renderValue={
               input !== ""
                 ? undefined
-                : () => <StyledPlaceHolder>Please Input</StyledPlaceHolder>
+                : () => <StyledPlaceHolder>{placeholder}</StyledPlaceHolder>
             }
           >
             {data.map((item, index) =>{

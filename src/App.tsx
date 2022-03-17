@@ -25,22 +25,22 @@ import { useForm } from "react-hook-form";
 
 const data = [
   {
-    name: 'Test Title 1',
+    name: "Test Title 1",
     value: 1,
   },
   {
-    name: 'Test Title 2',
+    name: "Test Title 2",
     value: 2,
   },
   {
-    name: 'Test Title 3',
+    name: "Test Title 3",
     value: 3,
   },
   {
-    name: 'Test Title 4',
+    name: "Test Title 4",
     value: 4,
   },
-]
+];
 
 function App() {
   const {
@@ -90,9 +90,17 @@ function App() {
           label={"Application Type"}
           errors={errors}
           control={control}
+          placeholder={"Please Input"}
           data={data}
         />
-        <DatePickerCommon />
+        <DatePickerCommon
+          name={"datePickerCommon"}
+          control={control}
+          label={"New Document Received Date"}
+          id={"New Document Received Date"}
+          placeholder={"Please Input"}
+          helperText={"DDMMYYYY"}
+        />
       </Accordions>
     </Router>
   );
