@@ -11,6 +11,7 @@ const StyledButton = styled(Button)`
 
   &:focus {
     color: #ef841f;
+    font-weight: bold;
     &:hover,
     &.Mui-focusVisible {
       border-width: 2;
