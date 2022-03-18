@@ -22,6 +22,7 @@ import {
 import { ReactComponent as Task } from "./assets/icons/Task.svg";
 import { ReactComponent as MemberEnquiry } from "./assets/icons/MemberEnquiry.svg";
 import { useForm } from "react-hook-form";
+import { Button } from "@mui/material";
 
 const data = [
   {
@@ -102,6 +103,10 @@ function App() {
           helperText={"DDMMYYYY"}
         />
       </Accordions>
+
+      <>
+        <Button>Test for Theme</Button>
+      </>
     </Router>
   );
 }
