@@ -19,9 +19,10 @@ import {
   SelectField,
   TextFields,
 } from "./components";
+import { useFormik } from "formik";
+import * as Yup from "yup";
 import { ReactComponent as Task } from "./assets/icons/Task.svg";
 import { ReactComponent as MemberEnquiry } from "./assets/icons/MemberEnquiry.svg";
-import { useForm } from "react-hook-form";
 import { Button } from "@mui/material";
 
 const data = [
@@ -44,10 +45,19 @@ const data = [
 ];
 
 function App() {
-  const {
-    control,
-    formState: { errors },
-  } = useForm();
+  const formik = useFormik({
+    initialValues: {
+      refNo: "",
+      ApplicationType: "",
+      date: null,
+    },
+    validationSchema: Yup.object({
+      refNo: Yup.string().min(5, "Must be 5 characters at least"),
+    }),
+    onSubmit: (values) => {
+      alert(JSON.stringify(values, null, 2));
+    },
+  });
 
   return (
     <Router>
@@ -66,7 +76,6 @@ function App() {
       />
       <OutlineButtonRec107 id="test filter" text="FILTER" path="/" />
       <OutlineSearchRec17 />
-      <SearchButton id="test filter" text="SEARCH" path="/" />
       <ClearButton id="test clear" text="CLEAR" />
       <DashBoardButton text={"Task"}>
         <Task />
@@ -77,31 +86,40 @@ function App() {
       <ArrowButton ariaLabel="arrow" />
 
       <Accordions title={"Case For Your Action"}>
-        <TextFields
-          name={"Application-Reference-No"}
-          id={"RefNo"}
-          label={"Application Reference No."}
-          control={control}
-          placeholder={"Please Input"}
-          errors={errors}
-        />
-        <SelectField
-          name={"Application-type"}
-          id={"applicationType"}
-          label={"Application Type"}
-          errors={errors}
-          control={control}
-          placeholder={"Please Input"}
-          data={data}
-        />
-        <DatePickerCommon
-          name={"datePickerCommon"}
-          control={control}
-          label={"New Document Received Date"}
-          id={"New Document Received Date"}
-          placeholder={"Please Input"}
-          helperText={"DDMMYYYY"}
-        />
+        <form onSubmit={formik.handleSubmit}>
+          <TextFields
+            name={"refNo"}
+            id={"ref_No"}
+            label={"Application Reference No."}
+            placeholder={"Please Input"}
+            value={formik.values.refNo}
+            onChange={formik.handleChange}
+            error={formik.touched.refNo && Boolean(formik.errors.refNo)}
+            helperText={formik.touched.refNo && formik.errors.refNo}
+          />
+          <SelectField
+            name={"ApplicationType"}
+            id={"appl-type"}
+            label={"Application Type"}
+            placeholder={"Please Input"}
+            value={formik.values.ApplicationType}
+            onChange={formik.handleChange}
+            error={
+              formik.touched.ApplicationType &&
+              Boolean(formik.errors.ApplicationType)
+            }
+            data={data}
+          />
+          <DatePickerCommon
+            label={"New Document Received Date"}
+            id={"New Document Received Date"}
+            placeholder={"Please Input"}
+            helperText={"DDMMYYYY"}
+            value={formik.values.date}
+            onChange={(value) => formik.setFieldValue("date", value)}
+          />
+          <SearchButton id="test filter" text="SEARCH" />
+        </form>
       </Accordions>
 
       <>

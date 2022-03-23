@@ -1,11 +1,12 @@
-import { Control, FieldValues, FormState } from "react-hook-form";
+import { ChangeEventHandler } from "react";
 
 export interface TextFieldProps {
   id: string;
   name: string;
   label?: string;
-  control: Control<FieldValues, any>;
   placeholder?: string;
-  errors: FormState<FieldValues>["errors"];
-  helperText?: string;
+  helperText?: string | any ;
+  value: string;
+  error: boolean |any;
+  onChange: ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>;
 }
