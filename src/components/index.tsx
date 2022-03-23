@@ -14,6 +14,7 @@ import Accordions from "./Accordion/Accordions";
 import TextFields from "./Input/TextFields";
 import SelectField from "./Input/SelectField";
 import DatePickerCommon from "./Input/DatePickerCommon";
+import BasicDateRangePicker from "./Input/BasicDateRangePicker";
 
 export {
   Navbar,
@@ -31,5 +32,6 @@ export {
   Accordions,
   TextFields,
   SelectField,
-  DatePickerCommon
+  DatePickerCommon,
+  BasicDateRangePicker
 };
