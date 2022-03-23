@@ -1,4 +1,4 @@
-import React from "react";
+import React, { MouseEventHandler } from "react";
 import { IconButton } from "@mui/material";
 import styled from "@emotion/styled";
 import { ReactComponent as LeftArrow } from "../../assets/icons/MPFA_ic_sidemenu_arrow_l.svg";
@@ -27,9 +27,24 @@ const StyledSvgContainer = styled.div`
   }
 `;
 
-const ArrowButton = ({ ariaLabel }: { ariaLabel: string }) => {
+const ArrowButton = ({
+  id,
+  ariaLabel,
+  onClick,
+  ...props
+}: {
+  id: string;
+  ariaLabel: string;
+  onClick: MouseEventHandler<HTMLButtonElement>;
+}) => {
   return (
-    <StyledIconButton  aria-label={ariaLabel}>
+    <StyledIconButton
+      id={id}
+      aria-label={ariaLabel}
+      type="button"
+      onClick={onClick}
+      {...props}
+      >
       <StyledSvgContainer>
         <LeftArrow />
       </StyledSvgContainer>

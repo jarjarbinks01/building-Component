@@ -14,7 +14,7 @@ const Nav = styled.nav`
   position: sticky;
   top: 0;
   z-index: 999;
-  margin-bottom: 5%; //TEMP style
+  /* margin-bottom: 5%; //TEMP style */
 `;
 
 const NavbarContainer = styled(NavBarContainer)`
@@ -31,6 +31,17 @@ const Logo = styled(Link)`
 
 const date = new Date();
 
+const StyledContainer = styled.div`
+  display: flex;
+`
+
+const StyledStroke = styled.div`
+  display: flex;
+  width: 1px;
+  background-color: #FFF;
+  margin: 10px;
+`
+
 const ServerDate = styled.div`
   display: flex;
   align-items: center;
@@ -44,6 +55,8 @@ const Navbar = () => {
         <Logo to="/">
           <NavIcon id="NavIcon"/>
         </Logo>
+        <StyledContainer>
+        <StyledStroke />
         <ServerDate>
           {date.getDate() +
             "/" +
@@ -51,6 +64,7 @@ const Navbar = () => {
             "/" +
             date.getFullYear()}
         </ServerDate>
+        </StyledContainer>
       </NavbarContainer>
     </Nav>
   );

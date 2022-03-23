@@ -1,7 +1,6 @@
 import Navbar from "./Navbar/Navbar";
-import PrimaryButton from "./Buttons/PrimaryButton";
-import OutlineButton from "./Buttons/OutlineButton";
-import CircleIconButton from "./Buttons/CircleIconButton";
+import ButtonGeneralCTA from "./Buttons/ButtonGeneralCTA";
+import OutlineButtonSave from "./Buttons/OutlineButtonSave";
 import ButtonCom371 from "./Buttons/ButtonCom371";
 import OutlineButtonRec107 from "./Buttons/OutlineButtonRec107";
 import OutlineSearchRec17 from "./Input/OutlineSearchRec17";
@@ -14,12 +13,14 @@ import TextFields from "./Input/TextFields";
 import SelectField from "./Input/SelectField";
 import DatePickerCommon from "./Input/DatePickerCommon";
 import BasicDateRangePicker from "./Input/BasicDateRangePicker";
+import Footer from "./Footer/Footer";
+import OutlineButtonClear from "./Buttons/OutlineButtonClear";
+import ButtonCTAWithIcon from "./Buttons/ButtonCTAWithIcon";
 
 export {
   Navbar,
-  PrimaryButton,
-  OutlineButton,
-  CircleIconButton,
+  ButtonGeneralCTA,
+  OutlineButtonSave,
   ButtonCom371,
   OutlineButtonRec107,
   OutlineSearchRec17,
@@ -31,5 +32,8 @@ export {
   TextFields,
   SelectField,
   DatePickerCommon,
-  BasicDateRangePicker
+  BasicDateRangePicker,
+  Footer,
+  OutlineButtonClear,
+  ButtonCTAWithIcon
 };

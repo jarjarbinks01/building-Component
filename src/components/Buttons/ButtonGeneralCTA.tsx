@@ -1,31 +1,28 @@
-import styled from "@emotion/styled";
-import { Button } from "@mui/material";
 import React, { MouseEventHandler } from "react";
+import { Button } from "@mui/material";
+import styled from "@emotion/styled";
 
 const StyledButton = styled(Button)`
-  border-color: #d85791;
-  border-width: 2;
-  border-style: solid;
+  background-color: #ef841f;
+  color: #fff;
   width: 107px;
   height: 38px;
   border-radius: 19px;
+  margin: 5px;
 
   font-size: 14px;
-  color: #cf2e76;
-  letter-spacing: 0.5px;
   text-align: center;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
+  font-weight: bold;
 
   &:hover {
-    border-width: 2;
-    border-color: #d85791;
-    background-color: #d85791;
+    background-color: #ef9f1f;
     box-shadow: none;
-    color: #fff;
   }
 `;
 
-const ClearButton = ({
+const ButtonGeneralCTA = ({
   text,
   id,
   onClick,
@@ -36,10 +33,17 @@ const ClearButton = ({
   onClick: MouseEventHandler<HTMLButtonElement>;
 }) => {
   return (
-    <StyledButton id={id} type="button" variant="outlined" onClick={onClick} {...props}>
+    <StyledButton
+      id={id}
+      type="submit"
+      variant="contained"
+      disableElevation
+      onClick={onClick}
+      {...props}
+    >
       {text}
     </StyledButton>
   );
 };
 
-export default ClearButton;
+export default ButtonGeneralCTA;
