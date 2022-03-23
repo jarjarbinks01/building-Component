@@ -15,13 +15,16 @@ const BasicDateRangePicker = () => {
           onChange={(newValue) => {
             setValue(newValue);
           }}
-          renderInput={(startProps, endProps) => (
-            <React.Fragment>
-              <TextField {...startProps} />
-              <Box sx={{ mx: 2 }}> to </Box>
-              <TextField {...endProps} />
-            </React.Fragment>
-          )}
+          renderInput={({ inputProps, ...startProps }, endProps) => {
+            const startValue = inputProps?.value;
+            delete inputProps?.value
+            return (
+              <TextField
+                {...startProps}
+                inputProps={inputProps}
+                value={`${startValue}-${endProps.inputProps?.value}`}
+             />
+  )}}
         />
     </LocalizationProvider>
   );
