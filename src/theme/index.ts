@@ -73,6 +73,27 @@ const theme = createTheme({
       fontWeight: 400,
       color: '#42526E',
     },
+    body2: {
+        fontSize: 16,
+        fontFamily: 'Roboto',
+        fontWeight: 700,
+        color: '#3D4F76',
+    },
+    caption: {
+      fontSize: 16,
+      fontStyle: 'Italic',
+      fontFamily: 'Roboto',
+      fontWeight: 300,
+      color: '#9D9D9D',
+    },
+    overline: {
+      fontSize: 12,
+      fontFamily: 'Roboto',
+      fontWeight: 500,
+      color: '#F6354A',
+    },
+    
+
   },
 });
 
