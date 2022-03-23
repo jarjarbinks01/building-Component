@@ -2,7 +2,6 @@ import Navbar from "./Navbar/Navbar";
 import PrimaryButton from "./Buttons/PrimaryButton";
 import OutlineButton from "./Buttons/OutlineButton";
 import CircleIconButton from "./Buttons/CircleIconButton";
-import LabelButton from "./Buttons/LabelButton";
 import ButtonCom371 from "./Buttons/ButtonCom371";
 import OutlineButtonRec107 from "./Buttons/OutlineButtonRec107";
 import OutlineSearchRec17 from "./Input/OutlineSearchRec17";
@@ -21,7 +20,6 @@ export {
   PrimaryButton,
   OutlineButton,
   CircleIconButton,
-  LabelButton,
   ButtonCom371,
   OutlineButtonRec107,
   OutlineSearchRec17,

@@ -9,7 +9,6 @@ import {
   ClearButton,
   DashBoardButton,
   DatePickerCommon,
-  LabelButton,
   Navbar,
   OutlineButton,
   OutlineButtonRec107,
@@ -63,10 +62,14 @@ function App() {
     <Router>
       <GlobalStyle />
       <Navbar />
+      
+      {/* Outdated */}
+
       <PrimaryButton text="SUBMIT" />
       <OutlineButton text="BACK" />
       <CircleIconButton />
-      <LabelButton />
+
+      {/* Outdated */}
 
       <ButtonCom371
         id="test371"

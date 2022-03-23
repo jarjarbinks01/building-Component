@@ -5,6 +5,7 @@ import styled from "@emotion/styled";
 
 const StyledButton = styled(Button)`
   background-color: #e1893b;
+  color: #FFF;
   width: 100px;
   border-radius: 20px;
 

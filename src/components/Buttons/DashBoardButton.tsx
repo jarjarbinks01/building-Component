@@ -31,12 +31,10 @@ const StyledButton = styled(Button)`
 `;
 
 const StyledSvgContainer = styled.div`
-    display: flex;
-  align-Items: center;
+  display: flex;
+  align-items: center;
   fill: currentcolor;
-
-`
-  
+`;
 
 const StyledText = styled.div`
   flex: 0;

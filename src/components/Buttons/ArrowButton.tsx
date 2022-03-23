@@ -1,21 +1,38 @@
 import React from "react";
 import { IconButton } from "@mui/material";
-import ArrowBackIosNewRoundedIcon from '@mui/icons-material/ArrowBackIosNewRounded';
 import styled from "@emotion/styled";
+import { ReactComponent as LeftArrow } from "../../assets/icons/MPFA_ic_sidemenu_arrow_l.svg";
 
 const StyledIconButton = styled(IconButton)`
-  color: #42526E;
-  border-color: #42526E;
-  border-width: 2px;
-  border-style: solid;
-  width: 30px;
-  height: 30px;
+  display: flex;
+  align-items: center;
+  height: 44px;
+  width: 44px;
+`;
+
+const StyledSvgContainer = styled.div`
+  display: flex;
+  margin-top: 5px; //temp style
+  circle {
+    fill: #fff;
+  }
+  path {
+    fill: #42526e;
+  }
+  &:hover circle {
+    fill: #42526e;
+  }
+  &:hover path {
+    fill: #fff;
+  }
 `;
 
 const ArrowButton = ({ ariaLabel }: { ariaLabel: string }) => {
   return (
-    <StyledIconButton aria-label={ariaLabel}>
-      <ArrowBackIosNewRoundedIcon sx={{fontSize:'20px'}}/>
+    <StyledIconButton  aria-label={ariaLabel}>
+      <StyledSvgContainer>
+        <LeftArrow />
+      </StyledSvgContainer>
     </StyledIconButton>
   );
 };

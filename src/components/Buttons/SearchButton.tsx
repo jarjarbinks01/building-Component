@@ -4,6 +4,7 @@ import React from "react";
 
 const StyledButton = styled(Button)`
   background-Color: #EF841F;
+  color: #FFF;
   width: 107px;
   height: 38px;
   border-Radius: 19px;
