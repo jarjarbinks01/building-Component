@@ -26,7 +26,6 @@ import { ReactComponent as MemberEnquiry } from "./assets/icons/MemberEnquiry.sv
 import { Button } from "@mui/material";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-
 const data = [
   {
     name: "Test Title 1",
@@ -237,6 +236,24 @@ function App() {
       </Grid>
       <Grid item xs={12} sm={9}>
       <Box sx={{ typography: 'body1' }}>Body/Roboto/Regular/14px</Box>
+      </Grid>
+      <Grid item xs={12} sm={2}>
+      <Box sx={{ typography: 'body1' }}>Input Field Text</Box>
+      </Grid>
+      <Grid item xs={12} sm={9}>
+      <Box sx={{ typography: 'body2' }}>InputField/Roboto/Bold/16px</Box>
+      </Grid>
+      <Grid item xs={12} sm={2}>
+      <Box sx={{ typography: 'body1' }}>Input Field Hints</Box>
+      </Grid>
+      <Grid item xs={12} sm={9}>
+      <Box sx={{ typography: 'caption' }}>InputField/Roboto/Italic/16px</Box>
+      </Grid>
+      <Grid item xs={12} sm={2}>
+      <Box sx={{ typography: 'body1' }}>Input Field Alert</Box>
+      </Grid>
+      <Grid item xs={12} sm={9}>
+      <Box sx={{ typography: 'overline' }}>InputField/Roboto/Medium/12px</Box>
       </Grid>
         </Grid>
       </>
