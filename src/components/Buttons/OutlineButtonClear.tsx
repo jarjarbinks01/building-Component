@@ -1,53 +1,47 @@
 import styled from "@emotion/styled";
 import { Button } from "@mui/material";
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { MouseEventHandler } from "react";
 
 const StyledButton = styled(Button)`
-  border-Color:#2D9FC3;
+  border-Color: #FFFFFF;
   border-Width: 2px;
   border-Style: solid;
-  width: 99px;
+  width: 107px;
   height: 38px;
   border-Radius: 19px;
+  margin: 5px;
+
 
   font-Size: 14px;
-  color: #2D9FC3;
+  color: #FFFFFF;
   letter-Spacing: 0.5px;
   text-Align: center;
   font-Weight: bold;
   text-Transform: uppercase;
 
   &:hover {
-    background-color: #1DB0DE;
     border-Width: 2;
-    border-Color: #1DB0DE;
+    border-Color: #CF2E76;
     box-Shadow: none;
-    color: #FFF;
+    background-color: #CF2E76;
+    box-shadow: 0px 3px 6px #00000029;
   }
 `
-  
 
-const StyledLink = styled(Link)`
-  text-decoration: none;
-`;
-
-const OutlineButtonRec107 = ({
+const OutlineButtonClear = ({
   text,
-  path,
   id,
+  onClick
 }: {
   text: string;
-  path: string;
+  onClick: MouseEventHandler<HTMLButtonElement>;
   id: string;
 }) => {
   return (
-    <StyledLink id={id} to={path}>
-      <StyledButton type="button" variant="outlined">
+      <StyledButton id={id} type="button" variant="outlined" onClick={onClick}>
         {text}
       </StyledButton>
-    </StyledLink>
   );
 };
 
-export default OutlineButtonRec107;
+export default OutlineButtonClear;

@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { Button } from "@mui/material";
-import React from "react";
+import React, { MouseEventHandler } from "react";
 
 const StyledButton = styled(Button)`
   border-color: #d85791;
@@ -25,9 +25,18 @@ const StyledButton = styled(Button)`
   }
 `;
 
-const ClearButton = ({ text, id }: { text: string; id: string }) => {
+const ClearButton = ({
+  text,
+  id,
+  onClick,
+  ...props
+}: {
+  text: string;
+  id: string;
+  onClick: MouseEventHandler<HTMLButtonElement>;
+}) => {
   return (
-    <StyledButton type="button" variant="outlined">
+    <StyledButton id={id} type="button" variant="outlined" onClick={onClick} {...props}>
       {text}
     </StyledButton>
   );

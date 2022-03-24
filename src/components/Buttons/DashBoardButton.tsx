@@ -1,7 +1,6 @@
-import React, { ReactNode } from "react";
+import React, { MouseEventHandler, ReactNode } from "react";
 import styled from "@emotion/styled";
 import { Button } from "@mui/material";
-import { Link } from "react-router-dom";
 
 const StyledButton = styled(Button)`
   color: #42526e;
@@ -31,12 +30,10 @@ const StyledButton = styled(Button)`
 `;
 
 const StyledSvgContainer = styled.div`
-    display: flex;
-  align-Items: center;
+  display: flex;
+  align-items: center;
   fill: currentcolor;
-
-`
-  
+`;
 
 const StyledText = styled.div`
   flex: 0;
@@ -44,14 +41,19 @@ const StyledText = styled.div`
 `;
 
 const DashBoardButton = ({
+  id,
   text,
   children,
+  onClick,
+  ...props
 }: {
+  id: string;
   text: string;
   children: ReactNode;
+  onClick: MouseEventHandler<HTMLButtonElement>;
 }) => {
   return (
-    <StyledButton variant="text">
+    <StyledButton id={id} variant="text" onClick={onClick} {...props}>
       <StyledSvgContainer>{children}</StyledSvgContainer>
       <StyledText>{text}</StyledText>
     </StyledButton>

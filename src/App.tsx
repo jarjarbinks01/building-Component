@@ -9,7 +9,7 @@ import {
   ClearButton,
   DashBoardButton,
   DatePickerCommon,
-  LabelButton,
+  LabelButcton,
   Navbar,
   OutlineButton,
   OutlineButtonRec107,
@@ -291,13 +291,13 @@ function App() {
           fontSize: '26px',
           fontWeight: '700',
         }}
-      >paddingTop: 30,
+      >paddingTop: 3,
         <br></br>
-        paddingBottom: 40,
+        paddingBottom: 4,
         <br></br>
-        paddingRight: 30,
+        paddingRight: 3,
         <br></br>
-        paddingLeft: 30,
+        paddingLeft: 3,
         <br></br>
         <br></br>
         boxShadow: 3,

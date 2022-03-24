@@ -37,7 +37,7 @@ const Accordions = ({ title, children }:{title: String, children: React.ReactNod
           aria-controls="panel1bh-content"
           id="panel1bh-header"
         >
-          <Typography variant="h4"  sx={{ width: "100%", color: "#2D9FC3" }}>
+          <Typography variant="h1"  sx={{ width: "100%", color: "#2D9FC3" }}>
             {title}
           </Typography>
         </AccordionSummary>

@@ -12,7 +12,13 @@ const GlobalStyle = createGlobalStyle`
 export const NavBarContainer = styled.div`
     z-index: 1;
     width: 100%;
-    max-width: 1366px;
+    margin-left: auto;
+    margin-right: auto;
+`
+
+export const FooterContainer = styled.div`
+    z-index: 1;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 `
