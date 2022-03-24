@@ -1,10 +1,10 @@
-import React from "react";
-import AdapterDateFns from "@mui/lab/AdapterDateFns";
-import LocalizationProvider from "@mui/lab/LocalizationProvider";
-import DesktopDatePicker from "@mui/lab/DatePicker";
-import { DatePickerCommonProps } from "./DatePickerCommon.types";
 import styled from "@emotion/styled";
+import AdapterDateFns from "@mui/lab/AdapterDateFns";
+import DesktopDatePicker from "@mui/lab/DatePicker";
+import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import { TextField } from "@mui/material";
+import React from "react";
+import { DatePickerCommonProps } from "./DatePickerCommon.types";
 
 const StyledContainer = styled.div``;
 
@@ -28,15 +28,16 @@ export default function DatePickerCommon({
   placeholder,
   helperText,
   value,
-  onChange
+  onChange,
+  ...props
 }: DatePickerCommonProps) {
-
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <StyledContainer>
         <StyledLabel>{label}</StyledLabel>
 
         <DesktopDatePicker
+          {...props}
           value={value}
           inputFormat="dd/MM/yyyy"
           onChange={onChange}

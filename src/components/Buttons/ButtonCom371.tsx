@@ -1,6 +1,7 @@
-import React, { MouseEventHandler } from "react";
-import { Button } from "@mui/material";
 import styled from "@emotion/styled";
+import { Button } from "@mui/material";
+import React from "react";
+import { ButtonCom371Props } from "./ButtonCom371.types";
 
 const StyledButton = styled(Button)`
   background-color: #ef841f;
@@ -22,16 +23,7 @@ const StyledButton = styled(Button)`
   }
 `;
 
-const ButtonCom371 = ({
-  text,
-  id,
-  onClick,
-  ...props
-}: {
-  text: string;
-  id: string;
-  onClick: MouseEventHandler<HTMLButtonElement>;
-}) => {
+const ButtonCom371 = ({ text, id, onClick, ...props }: ButtonCom371Props) => {
   return (
     <StyledButton
       id={id}

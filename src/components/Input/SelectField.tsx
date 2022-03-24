@@ -1,7 +1,6 @@
-import React, { useState } from "react";
-import { MenuItem } from "@mui/material";
-import { Select } from "@mui/material";
 import styled from "@emotion/styled";
+import { MenuItem, Select } from "@mui/material";
+import React from "react";
 import { SelectFieldProps } from "./SelectField,types";
 
 const StyledContainer = styled.div``;
@@ -13,10 +12,18 @@ const StyledLabel = styled.p`
 const StyledPlaceHolder = styled.div`
   font-style: italic;
   color: #9d9d9d;
+  opacity: 0.5;
 `;
 
 const StyledError = styled.div`
   color: #d32f2f;
+`;
+
+const StyledMenuItem = styled(MenuItem)`
+  &:focus {
+    color: #009ccd;
+    font-weight: bold;
+  }
 `;
 
 const SelectField = ({
@@ -28,12 +35,14 @@ const SelectField = ({
   value,
   onChange,
   error,
+  ...props
 }: SelectFieldProps) => {
   return (
     <StyledContainer>
       <StyledLabel>{label}</StyledLabel>
 
       <Select
+        {...props}
         displayEmpty
         id={id}
         name={name}
@@ -49,9 +58,9 @@ const SelectField = ({
       >
         {data.map((item, index) => {
           return (
-            <MenuItem key={index} value={item.value}>
+            <StyledMenuItem key={index} value={item.value}>
               {item.name}
-            </MenuItem>
+            </StyledMenuItem>
           );
         })}
       </Select>

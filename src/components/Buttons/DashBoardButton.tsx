@@ -1,6 +1,7 @@
-import React, { MouseEventHandler, ReactNode } from "react";
 import styled from "@emotion/styled";
 import { Button } from "@mui/material";
+import React from "react";
+import { DashBoardButtonProps } from "./DashBoardButton.types";
 
 const StyledButton = styled(Button)`
   color: #42526e;
@@ -46,12 +47,7 @@ const DashBoardButton = ({
   children,
   onClick,
   ...props
-}: {
-  id: string;
-  text: string;
-  children: ReactNode;
-  onClick: MouseEventHandler<HTMLButtonElement>;
-}) => {
+}: DashBoardButtonProps) => {
   return (
     <StyledButton id={id} variant="text" onClick={onClick} {...props}>
       <StyledSvgContainer>{children}</StyledSvgContainer>

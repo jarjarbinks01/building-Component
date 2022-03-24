@@ -5,18 +5,19 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
+import { AccordionsProps } from "./Accordions.types";
 
-const StyledContainer = styled('div')`
-  width:900px;
-`
+const StyledContainer = styled("div")`
+  width: 900px;
+`;
 
 const StyledAccordion = styled(Accordion)(() => ({
-  "&.MuiAccordion-root":{
-    borderRadius: '15px'
-  }
-}))
+  "&.MuiAccordion-root": {
+    borderRadius: "15px",
+  },
+}));
 
-const Accordions = ({ title, children }:{title: String, children: React.ReactNode}) => {
+const Accordions = ({ title, children }: AccordionsProps) => {
   const [expanded, setExpanded] = React.useState<string | false>(false);
 
   const handleChange =
@@ -27,8 +28,9 @@ const Accordions = ({ title, children }:{title: String, children: React.ReactNod
   return (
     <StyledContainer>
       <StyledAccordion
-        expanded={expanded === "panel1"}
+        // expanded={expanded === "panel1"}
         onChange={handleChange("panel1")}
+        defaultExpanded
       >
         <AccordionSummary
           expandIcon={
@@ -37,13 +39,13 @@ const Accordions = ({ title, children }:{title: String, children: React.ReactNod
           aria-controls="panel1bh-content"
           id="panel1bh-header"
         >
-          <Typography variant="h1"  sx={{ width: "100%", color: "#2D9FC3" }}>
+          <Typography variant="h1" sx={{ width: "100%", color: "#2D9FC3" }}>
             {title}
           </Typography>
         </AccordionSummary>
         <AccordionDetails>{children}</AccordionDetails>
       </StyledAccordion>
-      </StyledContainer>
+    </StyledContainer>
   );
 };
 

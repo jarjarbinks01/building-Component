@@ -1,7 +1,7 @@
-import React, { MouseEventHandler } from "react";
-import { IconButton } from "@mui/material";
 import styled from "@emotion/styled";
-import { Tooltip } from "@mui/material";
+import { IconButton, Tooltip } from "@mui/material";
+import React from "react";
+import { FloatingIconButtonProps } from "./FloatingIconButton.types";
 
 const StyledIconButton = styled(IconButton)`
   width: 50px;
@@ -11,14 +11,17 @@ const StyledIconButton = styled(IconButton)`
 
 const IconImage = styled.img``;
 
-const StyledTooltip = styled((props:any) => (
+const StyledTooltip = styled((props: any) => (
   <Tooltip classes={{ popper: props.className }} {...props} />
 ))`
   & .MuiTooltip-tooltip {
-    background-color: #42526E;
+    background-color: #42526e;
     box-shadow: 0px 2px 5px #00000029;
     border-radius: 6px;
     font-size: 14px;
+  }
+  & .MuiTooltip-arrow {
+    color: #42526e;
   }
 `;
 
@@ -29,13 +32,7 @@ const FloatingIconButton = ({
   src,
   alt,
   ...props
-}: {
-  id: string;
-  ariaLabel: string;
-  src: string;
-  alt: string;
-  onClick: MouseEventHandler<HTMLButtonElement>;
-}) => {
+}: FloatingIconButtonProps) => {
   return (
     <StyledTooltip title={ariaLabel} placement="top" arrow>
       <StyledIconButton
