@@ -24,7 +24,7 @@ declare module "@mui/material/styles/createPalette" {
   }
 
   interface PaletteOptions {
-    newPaleete1: PaletteColorOptions;
+    newPaleete1?: PaletteColorOptions;
     newPaleete2?: PaletteColorOptions;
   }
 }
