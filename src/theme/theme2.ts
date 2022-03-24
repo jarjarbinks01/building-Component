@@ -126,7 +126,6 @@ const theme2 = createTheme({
       fontWeight: 500,
       color: "#F6354A",
     },
-    
   },
   newProp1: {
     main: "#FF0000",
@@ -134,6 +133,5 @@ const theme2 = createTheme({
     light: "#4B5CA5",
   },
 });
-
 
 export default theme2;

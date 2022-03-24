@@ -5,19 +5,18 @@ import {
   Accordions,
   ArrowButton,
   ButtonCom371,
-  CircleIconButton,
   ClearButton,
   DashBoardButton,
   DatePickerCommon,
-  LabelButcton,
+  Footer,
   Navbar,
-  OutlineButton,
   OutlineButtonRec107,
   OutlineSearchRec17,
-  PrimaryButton,
+  ButtonGeneralCTA,
   SearchButton,
   SelectField,
   TextFields,
+  ButtonCTAWithIcon,
 } from "./components";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -64,27 +63,49 @@ function App() {
     <Router>
       <GlobalStyle />
       <Navbar />
-      <PrimaryButton text="SUBMIT" />
-      <OutlineButton text="BACK" />
-      <CircleIconButton />
-      <LabelButton />
-
+      <p>Primary Button</p>
+      <ButtonGeneralCTA
+        id="ButtonGeneralCTA"
+        text="Submit"
+        onClick={() => console.log("ButtonGeneralCTA")}
+      />
       <ButtonCom371
         id="test371"
         text="FOLLOW UP"
-        path="/"
         onClick={() => console.log("hi")}
       />
+      <ButtonCTAWithIcon
+        id="buttonCTAwifIcon"
+        text="Add new scheme"
+        onClick={() => console.log("buttonCTAwifIcon")}
+      />
+      <p>Secondary Button</p>
       <OutlineButtonRec107 id="test filter" text="FILTER" path="/" />
       <OutlineSearchRec17 />
-      <ClearButton id="test clear" text="CLEAR" />
-      <DashBoardButton text={"Task"}>
+      <ClearButton
+        id="test clear"
+        text="CLEAR"
+        onClick={() => console.log("clear")}
+      />
+      <DashBoardButton
+        id={"task"}
+        text={"Task"}
+        onClick={() => console.log("task")}
+      >
         <Task />
       </DashBoardButton>
-      <DashBoardButton text={"Member Enquiry"}>
+      <DashBoardButton
+        id={"memberEnquiry"}
+        text={"Member Enquiry"}
+        onClick={() => console.log("memberEnquiry")}
+      >
         <MemberEnquiry />
       </DashBoardButton>
-      <ArrowButton ariaLabel="arrow" />
+      <ArrowButton
+        id={"leftarrow"}
+        ariaLabel="arrow"
+        onClick={() => console.log("leftarrow")}
+      />
 
       <Accordions title={"Case For Your Action"}>
         <form onSubmit={formik.handleSubmit}>
@@ -305,6 +326,7 @@ function App() {
       </Grid>
       </Grid>
       </>
+      <Footer />
     </Router>
   );
 }
