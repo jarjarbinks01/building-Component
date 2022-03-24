@@ -1,6 +1,7 @@
 import { colors } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
 import { typography } from "@mui/system";
+import { spacing } from '@mui/system';
 
 const theme = createTheme({
   palette: {
@@ -92,10 +93,12 @@ const theme = createTheme({
       fontWeight: 500,
       color: '#F6354A',
     },
-    
-
   },
+  spacing: 10,
 });
+
+theme.spacing(3);
+theme.spacing(4);
 
 export default theme;
 
