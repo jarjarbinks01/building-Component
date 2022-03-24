@@ -29,21 +29,21 @@ declare module "@mui/material/styles/createPalette" {
   }
 }
 
-const theme2 = createTheme({
+const theme3 = createTheme({
   palette: {
     primary: {
-      main: "#E67E23",
-      light: "#E67E23",
+      main: "#009CCD",
+      light: "#0D6A88",
       contrastText: "#ffffff",
       title: "#ffffff",
     },
     secondary: {
-      main: "#2D9FC3",
+      main: "#EF841F",
       contrastText: "#ffffff",
     },
     success: {
       main: "#2FCC71",
-      light: "#ffffff",
+      light: "#FFEB00",
       contrastText: "#ffffff",
     },
     warning: {
@@ -51,9 +51,9 @@ const theme2 = createTheme({
       contrastText: "#ffffff",
     },
     info: {
-      main: "#F06363",
-      light: "#bcbcbc",
-      dark: "#ffffff",
+      main: "#777777",
+      light: "#ED562D",
+      dark: "#EF9F1F",
     },
     text: {
       primary: "#3d4f76",
@@ -73,58 +73,58 @@ const theme2 = createTheme({
   typography: {
     h1: {
       fontSize: 42,
-      fontFamily: "Roboto",
+      fontFamily: 'Roboto',
       fontWeight: 300,
-      color: "#E67E23",
+      color: '#009CCD',
     },
     h2: {
       fontSize: 26,
-      fontFamily: "Roboto",
-      fontWeight: 700,
-      color: "#E67E23",
+      fontFamily: 'Roboto',
+      fontWeight: 500,
+      color: '#009CCD',
     },
     h3: {
-      fontSize: 20,
-      fontFamily: "Roboto",
+      fontSize: 22,
+      fontFamily: 'Roboto',
       fontWeight: 700,
-      color: "#2C90AD",
+      color: '#EF9F1F',
     },
     h4: {
-      fontSize: 19,
-      fontFamily: "Roboto",
-      fontWeight: 700,
-      color: "#42526E",
+      fontSize: 20,
+      fontFamily: 'Roboto',
+      fontWeight: 500,
+      color: '#009CCD',
     },
     h5: {
       fontSize: 14,
-      fontFamily: "Roboto",
-      fontWeight: 500,
-      color: "#2D9FC3",
+      fontFamily: 'Roboto',
+      fontWeight: 700,
+      color: '#3D4F76',
     },
     body1: {
       fontSize: 14,
-      fontFamily: "Roboto",
+      fontFamily: 'Roboto',
       fontWeight: 400,
-      color: "#42526E",
+      color: '#42526E',
     },
     body2: {
-      fontSize: 16,
-      fontFamily: "Roboto",
-      fontWeight: 700,
-      color: "#3D4F76",
+        fontSize: 16,
+        fontFamily: 'Roboto',
+        fontWeight: 700,
+        color: '#3D4F76',
     },
     caption: {
       fontSize: 16,
-      fontStyle: "Italic",
-      fontFamily: "Roboto",
+      fontStyle: 'Italic',
+      fontFamily: 'Roboto',
       fontWeight: 300,
-      color: "#9D9D9D",
+      color: '#9D9D9D',
     },
     overline: {
       fontSize: 12,
-      fontFamily: "Roboto",
+      fontFamily: 'Roboto',
       fontWeight: 500,
-      color: "#F6354A",
+      color: '#F6354A',
     },
   },
   newProp1: {
@@ -233,10 +233,10 @@ const theme2 = createTheme({
   },
   spacing: 10,
 });
-theme2.spacing(3);
-theme2.spacing(4);
+theme3.spacing(3);
+theme3.spacing(4);
 
 
 
 
-export default theme2;
+export default theme3;
