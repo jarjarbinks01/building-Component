@@ -1,10 +1,9 @@
+import { styled, TextField } from "@mui/material";
 import React from "react";
-import { TextField } from "@mui/material";
 import { TextFieldProps } from "./TextFields.types";
-import styled from "@emotion/styled";
 
-const StyledContainer = styled.div``;
-const StyledLabel = styled.p`
+const StyledContainer = styled("div")``;
+const StyledLabel = styled("p")`
   color: #42526e;
   font-size: 13px;
   text-align: left;
@@ -27,12 +26,14 @@ const TextFields = ({
   onChange,
   error,
   helperText,
+  ...props
 }: TextFieldProps) => {
   return (
     <StyledContainer>
       <StyledLabel>{label}</StyledLabel>
 
       <StyledTextField
+        {...props}
         placeholder={placeholder}
         id={id}
         name={name}

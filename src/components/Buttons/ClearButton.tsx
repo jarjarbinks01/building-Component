@@ -1,42 +1,39 @@
-import styled from "@emotion/styled";
-import { Button } from "@mui/material";
-import React, { MouseEventHandler } from "react";
+import { Button, styled } from "@mui/material";
+import React from "react";
+import { ClearButtonProps } from "./ClearButton.types";
 
 const StyledButton = styled(Button)`
-  border-color: #d85791;
-  border-width: 2;
+  border-color: ${(props) => props.theme.palette.info.main};
+  border-width: 2px;
   border-style: solid;
   width: 107px;
   height: 38px;
   border-radius: 19px;
 
   font-size: 14px;
-  color: #cf2e76;
+  color: ${(props) => props.theme.palette.info.main};
   letter-spacing: 0.5px;
   text-align: center;
   text-transform: uppercase;
 
   &:hover {
-    border-width: 2;
-    border-color: #d85791;
-    background-color: #d85791;
+    border-width: 2px;
+    border-color: ${(props) => props.theme.palette.info.main};
+    background-color: ${(props) => props.theme.palette.info.main};
     box-shadow: none;
-    color: #fff;
+    color: ${(props) => props.theme.palette.background.paper};
   }
 `;
 
-const ClearButton = ({
-  text,
-  id,
-  onClick,
-  ...props
-}: {
-  text: string;
-  id: string;
-  onClick: MouseEventHandler<HTMLButtonElement>;
-}) => {
+const ClearButton = ({ text, id, onClick, ...props }: ClearButtonProps) => {
   return (
-    <StyledButton id={id} type="button" variant="outlined" onClick={onClick} {...props}>
+    <StyledButton
+      id={id}
+      type="button"
+      variant="outlined"
+      onClick={onClick}
+      {...props}
+    >
       {text}
     </StyledButton>
   );

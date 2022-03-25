@@ -1,52 +1,41 @@
-import styled from "@emotion/styled";
-import { Button } from "@mui/material";
+import { Button, styled } from "@mui/material";
 import React from "react";
-import { Link } from "react-router-dom";
+import { OutlineButtonRec107Props } from "./OutlineButtonRec107.types";
 
 const StyledButton = styled(Button)`
-  border-Color:#2D9FC3;
-  border-Width: 2px;
-  border-Style: solid;
+  border-color: ${(props) => props.theme.palette.primary.main};
+  border-width: 2px;
+  border-style: solid;
   width: 99px;
   height: 38px;
-  border-Radius: 19px;
+  border-radius: 19px;
 
-  font-Size: 14px;
-  color: #2D9FC3;
-  letter-Spacing: 0.5px;
-  text-Align: center;
-  font-Weight: bold;
-  text-Transform: uppercase;
+  font-size: 14px;
+  color: ${(props) => props.theme.palette.primary.main};
+  letter-spacing: 0.5px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
 
   &:hover {
-    background-color: #1DB0DE;
-    border-Width: 2;
-    border-Color: #1DB0DE;
-    box-Shadow: none;
-    color: #FFF;
+    background-color: #1db0de;
+    border-width: 2;
+    border-color: #1db0de;
+    box-shadow: none;
+    color: ${(props) => props.theme.palette.primary.contrastText};
   }
-`
-  
-
-const StyledLink = styled(Link)`
-  text-decoration: none;
 `;
 
 const OutlineButtonRec107 = ({
   text,
-  path,
   id,
-}: {
-  text: string;
-  path: string;
-  id: string;
-}) => {
+  onClick,
+  ...props
+}: OutlineButtonRec107Props) => {
   return (
-    <StyledLink id={id} to={path}>
-      <StyledButton type="button" variant="outlined">
-        {text}
-      </StyledButton>
-    </StyledLink>
+    <StyledButton id={id} type="button" variant="outlined" onClick={onClick}>
+      {text}
+    </StyledButton>
   );
 };
 

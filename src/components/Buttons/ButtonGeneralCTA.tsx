@@ -1,10 +1,10 @@
-import React, { MouseEventHandler } from "react";
-import { Button } from "@mui/material";
-import styled from "@emotion/styled";
+import { Button, styled } from "@mui/material";
+import React from "react";
+import { ButtonGeneralCTAProps } from "./ButtonGeneralCTA.types";
 
 const StyledButton = styled(Button)`
-  background-color: #ef841f;
-  color: #fff;
+  background-color: ${(props) => props.theme.palette.secondary.main};
+  color: ${(props) => props.theme.palette.secondary.contrastText};
   width: 107px;
   height: 38px;
   border-radius: 19px;
@@ -27,11 +27,7 @@ const ButtonGeneralCTA = ({
   id,
   onClick,
   ...props
-}: {
-  text: string;
-  id: string;
-  onClick: MouseEventHandler<HTMLButtonElement>;
-}) => {
+}: ButtonGeneralCTAProps) => {
   return (
     <StyledButton
       id={id}

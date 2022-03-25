@@ -1,11 +1,11 @@
-import React, { MouseEventHandler } from "react";
-import { Button } from "@mui/material";
-import styled from "@emotion/styled";
+import { Button, styled } from "@mui/material";
+import React from "react";
 import { ReactComponent as Add } from "../../assets/icons/ic_uploader_add.svg";
+import { ButtonCTAWithIconProps } from "./ButtonCTAWithIcon.types";
 
 const StyledButton = styled(Button)`
-  background-color: #009ccd;
-  color: #fff;
+  background-color: ${(props) => props.theme.palette.primary.main};
+  color: ${(props) => props.theme.palette.primary.contrastText};
   width: 189px;
   height: 38px;
   border-radius: 19px;
@@ -26,20 +26,16 @@ const StyledButton = styled(Button)`
 `;
 
 const StyledAddIcon = styled(Add)`
-    position: absolute;
-    margin-right: 75%;
-`
+  position: absolute;
+  margin-right: 75%;
+`;
 
 const ButtonCTAWithIcon = ({
   text,
   id,
   onClick,
   ...props
-}: {
-  text: string;
-  id: string;
-  onClick: MouseEventHandler<HTMLButtonElement>;
-}) => {
+}: ButtonCTAWithIconProps) => {
   return (
     <StyledButton
       id={id}
@@ -49,7 +45,7 @@ const ButtonCTAWithIcon = ({
       onClick={onClick}
       {...props}
     >
-    <StyledAddIcon />
+      <StyledAddIcon />
       {text}
     </StyledButton>
   );

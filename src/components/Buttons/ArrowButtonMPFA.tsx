@@ -1,7 +1,6 @@
-import React, { MouseEventHandler } from "react";
-import { IconButton } from "@mui/material";
-import styled from "@emotion/styled";
-import { ReactComponent as LeftArrow } from "../../assets/icons/MPFA_ic_sidemenu_arrow_l.svg";
+import { IconButton, styled } from "@mui/material";
+import React from "react";
+import { ArrowButtonMPFAProps } from "./ArrowButtonMPFA.types";
 
 const StyledIconButton = styled(IconButton)`
   display: flex;
@@ -10,7 +9,7 @@ const StyledIconButton = styled(IconButton)`
   width: 44px;
 `;
 
-const StyledSvgContainer = styled.div`
+const StyledSvgContainer = styled("div")`
   display: flex;
   margin-top: 5px; //temp style
   circle {
@@ -27,16 +26,13 @@ const StyledSvgContainer = styled.div`
   }
 `;
 
-const ArrowButton = ({
+const ArrowButtonMPFA = ({
   id,
   ariaLabel,
   onClick,
+  children,
   ...props
-}: {
-  id: string;
-  ariaLabel: string;
-  onClick: MouseEventHandler<HTMLButtonElement>;
-}) => {
+}: ArrowButtonMPFAProps) => {
   return (
     <StyledIconButton
       id={id}
@@ -44,12 +40,10 @@ const ArrowButton = ({
       type="button"
       onClick={onClick}
       {...props}
-      >
-      <StyledSvgContainer>
-        <LeftArrow />
-      </StyledSvgContainer>
+    >
+      <StyledSvgContainer>{children}</StyledSvgContainer>
     </StyledIconButton>
   );
 };
 
-export default ArrowButton;
+export default ArrowButtonMPFA;
