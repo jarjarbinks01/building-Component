@@ -1,8 +1,6 @@
-import { Button, FormControlLabel } from "@mui/material";
+import { Button } from "@mui/material";
 import Box from "@mui/material/Box";
-import FormControl from '@mui/material/FormControl';
 import Grid from "@mui/material/Grid";
-import RadioGroup from '@mui/material/RadioGroup';
 import { useFormik } from "formik";
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
@@ -15,7 +13,9 @@ import {
   Accordions,
   ArrowButtonMPFA,
   ArrowButtonTrustee,
-  ButtonCom371, ButtonCTAWithIcon, ButtonGeneralCTA,
+  ButtonCom371,
+  ButtonCTAWithIcon,
+  ButtonGeneralCTA,
   ClearButton,
   DashBoardButton,
   DatePickerCommon,
@@ -23,11 +23,40 @@ import {
   Footer,
   Navbar,
   OutlineButtonRec107,
-  OutlineSearchRec17, RadioButton, SearchButton,
+  OutlineSearchRec17,
+  SearchButton,
   SelectField,
-  TextFields
+  TextFields,
+<<<<<<< HEAD
+  ButtonCTAWithIcon,
+  RadioButton,
+||||||| 6b07c13
+  ButtonCTAWithIcon,
+=======
+>>>>>>> f979d2c28c2885b8691c324204c540f392a9884b
 } from "./components";
+<<<<<<< HEAD
+import { useFormik } from "formik";
+import * as Yup from "yup";
+import { ReactComponent as Task } from "./assets/icons/Task.svg";
+import { ReactComponent as MemberEnquiry } from "./assets/icons/MemberEnquiry.svg";
+import { Button, FormControlLabel } from "@mui/material";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
+import FormControl from '@mui/material/FormControl';
+import FormLabel from '@mui/material/FormLabel';
+import RadioGroup from '@mui/material/RadioGroup';
+||||||| 6b07c13
+import { useFormik } from "formik";
+import * as Yup from "yup";
+import { ReactComponent as Task } from "./assets/icons/Task.svg";
+import { ReactComponent as MemberEnquiry } from "./assets/icons/MemberEnquiry.svg";
+import { Button } from "@mui/material";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
+=======
 import GlobalStyle from "./globalStyles";
+>>>>>>> f979d2c28c2885b8691c324204c540f392a9884b
 const data = [
   {
     name: "Test Title 1",
@@ -118,6 +147,7 @@ function App() {
             text="Add new scheme"
             onClick={() => console.log("buttonCTAwifIcon")}
           />
+<<<<<<< HEAD
           <SearchButton id="test filter" text="SEARCH" />
         </form>
       </Accordions>
@@ -131,6 +161,12 @@ function App() {
         <FormControlLabel value="male" control={<RadioButton />} label=" " />
       </RadioGroup>
     </FormControl>
+||||||| 6b07c13
+          <SearchButton id="test filter" text="SEARCH" />
+        </form>
+      </Accordions>
+
+=======
           <p>Secondary Button</p>
           <OutlineButtonRec107
             id="test filter"
@@ -220,6 +256,7 @@ function App() {
           </Accordions>
         </Grid>
       </Grid>
+>>>>>>> f979d2c28c2885b8691c324204c540f392a9884b
       <>
         <Button>Test for Theme</Button>
     <br></br>
@@ -229,6 +266,7 @@ function App() {
         <Box sx={{ paddingTop: 1, paddingLeft: 2, typography: 'h1' }}>Trustee Portal</Box>
         <br></br>
         <Grid container spacing={1}>
+<<<<<<< HEAD
       <Grid item xs={5} sm={9}>
         <Box sx={{ paddingTop: 1, paddingLeft: 2, typography: 'h4' }}>Color Scheme</Box>
       </Grid>
@@ -475,10 +513,264 @@ function App() {
       <Box sx={{ typography: 'overline' }}>InputField/Roboto/12px/500/#F6354A</Box>
       </Grid>
       </Grid>
+||||||| 6b07c13
+        <Grid item xs={5} sm={9}>
+        <Box sx={{ paddingTop: 1, paddingLeft: 2, typography: 'h1' }}>Color Scheme</Box>
+      </Grid>
+      <Grid item xs={5} sm={9}>
+        <Box sx={{ paddingTop: 1, paddingLeft: 2, typography: 'h4' }}>Trustee Portal</Box>
+      </Grid>
+      <Grid item xs={12} sm={4}>
+        <Box sx={{ bgcolor: 'primary.light', color: 'primary.contrastText', p: 2 }}>
+          Theme #4B5CA5
+        </Box>
+      </Grid>
+      <Grid item xs={12} sm={4}>
+        <Box sx={{ bgcolor: 'primary.main', color: 'primary.contrastText', p: 2 }}>
+          Primary #009CCD
+        </Box>
+      </Grid>
+      <Grid item xs={12} sm={4}>
+        <Box
+          sx={{
+            bgcolor: 'secondary.main',
+            color: 'secondary.contrastText',
+            p: 2,
+          }}
+        >
+          Secondary #EF841F
+        </Box>
+      </Grid>
+      <Grid item xs={12} sm={4}>
+        <Box sx={{ bgcolor: 'warning.main', color: 'warning.contrastText', p: 2 }}>
+          Additional 1 #F6354A
+        </Box>
+      </Grid>
+      <Grid item xs={12} sm={4}>
+        <Box sx={{ bgcolor: 'success.main', color: 'success.contrastText', p: 2 }}>
+          Additional 2 #2FCC71
+        </Box>
+      </Grid>
+      <Grid item xs={12} sm={4}>
+        <Box sx={{ bgcolor: 'info.main', color: 'info.contrastText', p: 2 }}>
+          Additional 3 #F06363
+        </Box>
+      </Grid>
+      <Grid item xs={12} sm={4}>
+        <Box sx={{ bgcolor: 'info.light', color: 'info.contrastText', p: 2 }}>
+          Additional 4 #BCBCBC
+        </Box>
+      </Grid>
+      <Grid item xs={12} sm={4}>
+        <Box sx={{ bgcolor: 'info.dark', color: 'info.contrastText', p: 2 }}>
+          Additional 5 #9D4DE1
+        </Box>
+      </Grid>
+      <Grid item xs={12} sm={4}>
+        <Box sx={{ bgcolor: 'success.light', color: 'success.contrastText', p: 2 }}>
+          Additional 6 #CF2E76
+        </Box>
+      </Grid>
+      <Grid item xs={12} sm={4}>
+        <Box sx={{ bgcolor: 'text.primary', color: 'background.paper', p: 2 }}>
+          Text.Primary #3D4F76
+        </Box>
+      </Grid>
+      <Grid item xs={12} sm={4}>
+        <Box sx={{ bgcolor: 'text.secondary', color: 'background.paper', p: 2 }}>
+          Text.Secondary #9D9D9D
+        </Box>
+      </Grid>
+    </Grid>
+    <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+    <Grid container spacing={3}>
+        <Grid item xs={5} sm={12}>
+        <Box sx={{ paddingTop: 1, paddingLeft: 2, typography: 'h1' }}>Typography</Box>
+      </Grid>
+      <Grid item xs={5} sm={12}>
+        <Box sx={{ paddingTop: 1, paddingLeft: 2, typography: 'h4' }}>Trustee Portal & Admin Portal </Box>
+      </Grid>
+      <Grid item xs={12} sm={2}>
+      <Box sx={{ paddingTop: 1, paddingLeft: 2, typography: 'body1' }}>Heading 1</Box>
+      </Grid>
+      <Grid item xs={12} sm={9}>
+      <Box sx={{ typography: 'h1' }}>H1/Roboto/Light/42px</Box>
+      </Grid>
+      <Grid item xs={12} sm={2}>
+      <Box sx={{ paddingTop: 1, paddingLeft: 2, typography: 'body1' }}>Heading 2</Box>
+      </Grid>
+      <Grid item xs={12} sm={9}>
+      <Box sx={{ typography: 'h2' }}>H2/Roboto/Medium/26px</Box>
+      </Grid>
+      <Grid item xs={12} sm={2}>
+      <Box sx={{ paddingTop: 1, paddingLeft: 2, typography: 'body1' }}>Heading 3</Box>
+      </Grid>
+      <Grid item xs={12} sm={9}>
+      <Box sx={{ typography: 'h3' }}>H3/Roboto/Bold/22px</Box>
+      </Grid>
+      <Grid item xs={12} sm={2}>
+      <Box sx={{ paddingTop: 1, paddingLeft: 2, typography: 'body1' }}>Heading 4</Box>
+      </Grid>
+      <Grid item xs={12} sm={9}>
+      <Box sx={{ typography: 'h4' }}>H4/Roboto/Medium/20px</Box>
+      </Grid>
+      <Grid item xs={12} sm={2}>
+      <Box sx={{ paddingTop: 1, paddingLeft: 2, typography: 'body1' }}>Heading 5</Box>
+      </Grid>
+      <Grid item xs={12} sm={9}>
+      <Box sx={{ typography: 'h5' }}>H5/Roboto/Bold/14px</Box>
+      </Grid>
+      <Grid item xs={12} sm={2}>
+      <Box sx={{ paddingTop: 1, paddingLeft: 2, typography: 'body1' }}>Body</Box>
+      </Grid>
+      <Grid item xs={12} sm={9}>
+      <Box sx={{ typography: 'body1' }}>Body/Roboto/Regular/14px</Box>
+      </Grid>
+      <Grid item xs={12} sm={2}>
+      <Box sx={{ paddingTop: 1, paddingLeft: 2, typography: 'body1' }}>Input Field Text</Box>
+      </Grid>
+      <Grid item xs={12} sm={9}>
+      <Box sx={{ typography: 'body2' }}>InputField/Roboto/Bold/16px</Box>
+      </Grid>
+      <Grid item xs={12} sm={2}>
+      <Box sx={{ paddingTop: 1, paddingLeft: 2, typography: 'body1' }}>Input Field Hints</Box>
+      </Grid>
+      <Grid item xs={12} sm={9}>
+      <Box sx={{ typography: 'caption' }}>InputField/Roboto/Italic/16px</Box>
+      </Grid>
+      <Grid item xs={12} sm={2}>
+      <Box sx={{ paddingTop: 1, paddingLeft: 2, typography: 'body1' }}>Input Field Alert</Box>
+      </Grid>
+      <Grid item xs={12} sm={9}>
+      <Box sx={{ typography: 'overline' }}>InputField/Roboto/Medium/12px</Box>
+      </Grid>
+        </Grid>
+=======
+          <Grid item xs={5} sm={9}>
+            <Box sx={{ paddingTop: 1, paddingLeft: 2, typography: "h1" }}>
+              Color Scheme
+            </Box>
+          </Grid>
+          <Grid item xs={5} sm={9}>
+            <Box sx={{ paddingTop: 1, paddingLeft: 2, typography: "h4" }}>
+              Trustee Portal
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            <Box
+              sx={{
+                bgcolor: "primary.light",
+                color: "primary.contrastText",
+                p: 2,
+              }}
+            >
+              Theme #4B5CA5
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            <Box
+              sx={{
+                bgcolor: "primary.main",
+                color: "primary.contrastText",
+                p: 2,
+              }}
+            >
+              Primary #009CCD
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            <Box
+              sx={{
+                bgcolor: "secondary.main",
+                color: "secondary.contrastText",
+                p: 2,
+              }}
+            >
+              Secondary #EF841F
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            <Box
+              sx={{
+                bgcolor: "warning.main",
+                color: "warning.contrastText",
+                p: 2,
+              }}
+            >
+              Additional 1 #F6354A
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            <Box
+              sx={{
+                bgcolor: "success.main",
+                color: "success.contrastText",
+                p: 2,
+              }}
+            >
+              Additional 2 #2FCC71
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            <Box
+              sx={{ bgcolor: "info.main", color: "info.contrastText", p: 2 }}
+            >
+              Additional 3 #F06363
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            <Box
+              sx={{ bgcolor: "info.light", color: "info.contrastText", p: 2 }}
+            >
+              Additional 4 #BCBCBC
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            <Box
+              sx={{ bgcolor: "info.dark", color: "info.contrastText", p: 2 }}
+            >
+              Additional 5 #9D4DE1
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            <Box
+              sx={{
+                bgcolor: "success.light",
+                color: "success.contrastText",
+                p: 2,
+              }}
+            >
+              Additional 6 #CF2E76
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            <Box
+              sx={{ bgcolor: "text.primary", color: "background.paper", p: 2 }}
+            >
+              Text.Primary #3D4F76
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            <Box
+              sx={{
+                bgcolor: "text.secondary",
+                color: "background.paper",
+                p: 2,
+              }}
+            >
+              Text.Secondary #9D9D9D
+            </Box>
+          </Grid>
+        </Grid>
+>>>>>>> f979d2c28c2885b8691c324204c540f392a9884b
         <br></br>
         <br></br>
         <br></br>
         <br></br>
+<<<<<<< HEAD
     <Grid container spacing={3}>
       <Grid item xs={5} sm={12}>
         <Box sx={{ paddingTop: 1, paddingLeft: 2, typography: 'h4' }}>Spacing </Box>
@@ -502,6 +794,123 @@ function App() {
       >paddingTop: 3,
         <br></br>
         paddingBottom: 4,
+||||||| 6b07c13
+    <Grid container spacing={3}>
+        <Grid item xs={5} sm={12}>
+        <Box sx={{ paddingTop: 1, paddingLeft: 2, typography: 'h1' }}>Spacing</Box>
+      </Grid>
+      <Grid item xs={5} sm={12}>
+        <Box sx={{ paddingTop: 1, paddingLeft: 2, typography: 'h4' }}>Trustee Portal, MPFA Portal & Admin Portal </Box>
+      </Grid>
+      <Grid item xs={12} sm={10}>
+      <Box
+        sx={{
+          paddingTop: 3, paddingBottom: 4, paddingRight: 3, paddingLeft: 3,
+          boxShadow: 3,
+          width: '1080px',
+          height: '574px',
+          bgcolor: (theme) =>
+            theme.palette.mode === 'light' ? '#ffffff' : '#f2f2f2',
+          color: (theme) =>
+            theme.palette.mode === 'light' ? '#EF841F' : 'grey.800',
+          textAlign: 'left',
+          borderRadius: '15px',
+          fontSize: '26px',
+          fontWeight: '700',
+        }}
+      >paddingTop: 3,
+        <br></br>
+        paddingBottom: 4,
+=======
+        <Grid container spacing={3}>
+          <Grid item xs={5} sm={12}>
+            <Box sx={{ paddingTop: 1, paddingLeft: 2, typography: "h1" }}>
+              Typography
+            </Box>
+          </Grid>
+          <Grid item xs={5} sm={12}>
+            <Box sx={{ paddingTop: 1, paddingLeft: 2, typography: "h4" }}>
+              Trustee Portal & Admin Portal{" "}
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={2}>
+            <Box sx={{ paddingTop: 1, paddingLeft: 2, typography: "body1" }}>
+              Heading 1
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={9}>
+            <Box sx={{ typography: "h1" }}>H1/Roboto/Light/42px</Box>
+          </Grid>
+          <Grid item xs={12} sm={2}>
+            <Box sx={{ paddingTop: 1, paddingLeft: 2, typography: "body1" }}>
+              Heading 2
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={9}>
+            <Box sx={{ typography: "h2" }}>H2/Roboto/Medium/26px</Box>
+          </Grid>
+          <Grid item xs={12} sm={2}>
+            <Box sx={{ paddingTop: 1, paddingLeft: 2, typography: "body1" }}>
+              Heading 3
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={9}>
+            <Box sx={{ typography: "h3" }}>H3/Roboto/Bold/22px</Box>
+          </Grid>
+          <Grid item xs={12} sm={2}>
+            <Box sx={{ paddingTop: 1, paddingLeft: 2, typography: "body1" }}>
+              Heading 4
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={9}>
+            <Box sx={{ typography: "h4" }}>H4/Roboto/Medium/20px</Box>
+          </Grid>
+          <Grid item xs={12} sm={2}>
+            <Box sx={{ paddingTop: 1, paddingLeft: 2, typography: "body1" }}>
+              Heading 5
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={9}>
+            <Box sx={{ typography: "h5" }}>H5/Roboto/Bold/14px</Box>
+          </Grid>
+          <Grid item xs={12} sm={2}>
+            <Box sx={{ paddingTop: 1, paddingLeft: 2, typography: "body1" }}>
+              Body
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={9}>
+            <Box sx={{ typography: "body1" }}>Body/Roboto/Regular/14px</Box>
+          </Grid>
+          <Grid item xs={12} sm={2}>
+            <Box sx={{ paddingTop: 1, paddingLeft: 2, typography: "body1" }}>
+              Input Field Text
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={9}>
+            <Box sx={{ typography: "body2" }}>InputField/Roboto/Bold/16px</Box>
+          </Grid>
+          <Grid item xs={12} sm={2}>
+            <Box sx={{ paddingTop: 1, paddingLeft: 2, typography: "body1" }}>
+              Input Field Hints
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={9}>
+            <Box sx={{ typography: "caption" }}>
+              InputField/Roboto/Italic/16px
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={2}>
+            <Box sx={{ paddingTop: 1, paddingLeft: 2, typography: "body1" }}>
+              Input Field Alert
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={9}>
+            <Box sx={{ typography: "overline" }}>
+              InputField/Roboto/Medium/12px
+            </Box>
+          </Grid>
+        </Grid>
+>>>>>>> f979d2c28c2885b8691c324204c540f392a9884b
         <br></br>
         <br></br>
         <br></br>
