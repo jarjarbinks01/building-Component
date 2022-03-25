@@ -1,5 +1,4 @@
-import styled from "@emotion/styled";
-import { IconButton } from "@mui/material";
+import { IconButton, styled } from "@mui/material";
 import React from "react";
 import { ArrowButtonTrusteeProps } from "./ArrowButtonTrustee.types";
 
@@ -10,7 +9,7 @@ const StyledIconButton = styled(IconButton)`
   width: 44px;
 `;
 
-const StyledSvgContainer = styled.div`
+const StyledSvgContainer = styled("div")`
   display: flex;
   margin-top: 5px; //temp style
   circle {

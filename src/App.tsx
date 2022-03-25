@@ -108,7 +108,7 @@ function App() {
           <ButtonGeneralCTA
             id="ButtonGeneralCTA"
             text="Submit"
-            onClick={() => console.log("ButtonGeneralCTA")}
+            onClick={() => console.log("submit")}
           />
           <ButtonCom371
             id="test371"
@@ -147,52 +147,64 @@ function App() {
 
           <Accordions title={"Case For Your Action"}>
             <form onSubmit={formik.handleSubmit}>
-              <TextFields
-                name={"refNo"}
-                id={"ref_No"}
-                label={"Application Reference No."}
-                placeholder={"Please Input"}
-                value={formik.values.refNo}
-                onChange={formik.handleChange}
-                error={formik.touched.refNo && Boolean(formik.errors.refNo)}
-                helperText={formik.touched.refNo && formik.errors.refNo}
-              />
-              <SelectField
-                name={"ApplicationType"}
-                id={"appl-type"}
-                label={"Application Type"}
-                placeholder={"Please Input"}
-                value={formik.values.ApplicationType}
-                onChange={formik.handleChange}
-                error={
-                  formik.touched.ApplicationType &&
-                  Boolean(formik.errors.ApplicationType)
-                }
-                data={data}
-              />
-              <DatePickerCommon
-                label={"New Document Received Date"}
-                id={"New Document Received Date"}
-                placeholder={"Please Input"}
-                helperText={"DDMMYYYY"}
-                value={formik.values.date}
-                onChange={(value) => formik.setFieldValue("date", value)}
-              />
-              <DropDownAutoComplete
-                label={"Select MPF Scheme"}
-                id={"dropdownWithSearch"}
-                value={formik.values.scheme}
-                onChange={(event: any, newValue: any) => {
-                  formik.setFieldValue("scheme", newValue);
-                }}
-                options={mPFScheme.map((option) => option.title)}
-                placeholder={"Please Input"}
-              />
-              <SearchButton
-                id="test filter"
-                text="SEARCH"
-                onClick={() => console.log("search")}
-              />
+              <Grid container spacing={1}>
+                <Grid item sm={5}>
+                  <TextFields
+                    name={"refNo"}
+                    id={"ref_No"}
+                    label={"Application Reference No."}
+                    placeholder={"Please Input"}
+                    value={formik.values.refNo}
+                    onChange={formik.handleChange}
+                    error={formik.touched.refNo && Boolean(formik.errors.refNo)}
+                    helperText={formik.touched.refNo && formik.errors.refNo}
+                  />
+                </Grid>
+                <Grid item sm={5}>
+                  <SelectField
+                    name={"ApplicationType"}
+                    id={"appl-type"}
+                    label={"Application Type"}
+                    placeholder={"Please Input"}
+                    value={formik.values.ApplicationType}
+                    onChange={formik.handleChange}
+                    error={
+                      formik.touched.ApplicationType &&
+                      Boolean(formik.errors.ApplicationType)
+                    }
+                    data={data}
+                  />
+                </Grid>
+                <Grid item sm={5}>
+                  <DatePickerCommon
+                    label={"New Document Received Date"}
+                    id={"New Document Received Date"}
+                    placeholder={"Please Input"}
+                    helperText={"DDMMYYYY"}
+                    value={formik.values.date}
+                    onChange={(value) => formik.setFieldValue("date", value)}
+                  />
+                </Grid>
+                <Grid item sm={5}>
+                  <DropDownAutoComplete
+                    label={"Select MPF Scheme"}
+                    id={"dropdownWithSearch"}
+                    value={formik.values.scheme}
+                    onChange={(event: any, newValue: any) => {
+                      formik.setFieldValue("scheme", newValue);
+                    }}
+                    options={mPFScheme.map((option) => option.title)}
+                    placeholder={"Please Input"}
+                  />
+                </Grid>
+                <Grid item sm={3}>
+                  <SearchButton
+                    id="test filter"
+                    text="SEARCH"
+                    onClick={() => console.log("search")}
+                  />
+                </Grid>
+              </Grid>
             </form>
           </Accordions>
         </Grid>

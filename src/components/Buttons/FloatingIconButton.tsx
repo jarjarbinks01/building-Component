@@ -1,5 +1,4 @@
-import styled from "@emotion/styled";
-import { IconButton, Tooltip } from "@mui/material";
+import { IconButton, styled, Tooltip } from "@mui/material";
 import React from "react";
 import { FloatingIconButtonProps } from "./FloatingIconButton.types";
 
@@ -9,7 +8,7 @@ const StyledIconButton = styled(IconButton)`
   margin: 5px;
 `;
 
-const IconImage = styled.img``;
+const IconImage = styled("img")``;
 
 const StyledTooltip = styled((props: any) => (
   <Tooltip classes={{ popper: props.className }} {...props} />

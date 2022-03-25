@@ -1,12 +1,9 @@
-import styled from "@emotion/styled";
-import { Autocomplete, Paper, TextField } from "@mui/material";
+import { Autocomplete, Paper, styled, TextField } from "@mui/material";
 import React from "react";
 import { DropDownAutoCompleteProps } from "./DropDownAutoComplete.types";
 
-const StyledContainer = styled.div`
-  width: 40%;
-`;
-const StyledLabel = styled.p`
+const StyledContainer = styled("div")``;
+const StyledLabel = styled("p")`
   color: #42526e;
   font-size: 13px;
   text-align: left;

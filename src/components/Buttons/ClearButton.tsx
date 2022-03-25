@@ -1,10 +1,9 @@
-import styled from "@emotion/styled";
-import { Button } from "@mui/material";
+import { Button, styled } from "@mui/material";
 import React from "react";
 import { ClearButtonProps } from "./ClearButton.types";
 
 const StyledButton = styled(Button)`
-  border-color: #f06363;
+  border-color: ${(props) => props.theme.palette.info.main};
   border-width: 2px;
   border-style: solid;
   width: 107px;
@@ -12,17 +11,17 @@ const StyledButton = styled(Button)`
   border-radius: 19px;
 
   font-size: 14px;
-  color: #f06363;
+  color: ${(props) => props.theme.palette.info.main};
   letter-spacing: 0.5px;
   text-align: center;
   text-transform: uppercase;
 
   &:hover {
     border-width: 2px;
-    border-color: #f06363;
-    background-color: #f06363;
+    border-color: ${(props) => props.theme.palette.info.main};
+    background-color: ${(props) => props.theme.palette.info.main};
     box-shadow: none;
-    color: #fff;
+    color: ${(props) => props.theme.palette.background.paper};
   }
 `;
 

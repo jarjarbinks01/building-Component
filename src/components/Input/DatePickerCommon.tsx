@@ -1,14 +1,13 @@
-import styled from "@emotion/styled";
 import AdapterDateFns from "@mui/lab/AdapterDateFns";
 import DesktopDatePicker from "@mui/lab/DatePicker";
 import LocalizationProvider from "@mui/lab/LocalizationProvider";
-import { TextField } from "@mui/material";
+import { styled, TextField } from "@mui/material";
 import React from "react";
 import { DatePickerCommonProps } from "./DatePickerCommon.types";
 
-const StyledContainer = styled.div``;
+const StyledContainer = styled("div")``;
 
-const StyledLabel = styled.p`
+const StyledLabel = styled("p")`
   color: #42526e;
   font-size: 13px;
   text-align: left;

@@ -1,10 +1,9 @@
-import styled from "@emotion/styled";
-import { Button } from "@mui/material";
+import { Button, styled } from "@mui/material";
 import React from "react";
 import { OutlineButtonRec107Props } from "./OutlineButtonRec107.types";
 
 const StyledButton = styled(Button)`
-  border-color: #2d9fc3;
+  border-color: ${(props) => props.theme.palette.primary.main};
   border-width: 2px;
   border-style: solid;
   width: 99px;
@@ -12,7 +11,7 @@ const StyledButton = styled(Button)`
   border-radius: 19px;
 
   font-size: 14px;
-  color: #2d9fc3;
+  color: ${(props) => props.theme.palette.primary.main};
   letter-spacing: 0.5px;
   text-align: center;
   font-weight: bold;
@@ -23,7 +22,7 @@ const StyledButton = styled(Button)`
     border-width: 2;
     border-color: #1db0de;
     box-shadow: none;
-    color: #fff;
+    color: ${(props) => props.theme.palette.primary.contrastText};
   }
 `;
 

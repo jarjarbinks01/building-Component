@@ -1,5 +1,5 @@
-import styled from "@emotion/styled";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { styled } from "@mui/material";
 import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
@@ -7,15 +7,13 @@ import Typography from "@mui/material/Typography";
 import * as React from "react";
 import { AccordionsProps } from "./Accordions.types";
 
-const StyledContainer = styled("div")`
-  width: 900px;
-`;
+const StyledContainer = styled("div")``;
 
-const StyledAccordion = styled(Accordion)(() => ({
-  "&.MuiAccordion-root": {
-    borderRadius: "15px",
-  },
-}));
+const StyledAccordion = styled(Accordion)`
+  &.MuiAccordion-root {
+    border-radius: 15px;
+  }
+`;
 
 const Accordions = ({ title, children }: AccordionsProps) => {
   const [expanded, setExpanded] = React.useState<string | false>(false);

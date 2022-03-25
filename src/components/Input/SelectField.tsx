@@ -1,21 +1,20 @@
-import styled from "@emotion/styled";
-import { MenuItem, Select } from "@mui/material";
+import { MenuItem, Select, styled } from "@mui/material";
 import React from "react";
 import { SelectFieldProps } from "./SelectField,types";
 
-const StyledContainer = styled.div``;
-const StyledLabel = styled.p`
+const StyledContainer = styled("div")``;
+const StyledLabel = styled("p")`
   color: #42526e;
   font-size: 13px;
   text-align: left;
 `;
-const StyledPlaceHolder = styled.div`
+const StyledPlaceHolder = styled("div")`
   font-style: italic;
   color: #9d9d9d;
   opacity: 0.5;
 `;
 
-const StyledError = styled.div`
+const StyledError = styled("div")`
   color: #d32f2f;
 `;
 

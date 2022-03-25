@@ -1,16 +1,15 @@
-import styled from "@emotion/styled";
 import CloseIcon from "@mui/icons-material/Close";
 import SearchIcon from "@mui/icons-material/Search";
-import { TextField } from "@mui/material";
+import { styled, TextField } from "@mui/material";
 import React from "react";
 import { OutlineSearchRec17Props } from "./OutlineSearchRec17.types";
 
-const Search = styled.div`
+const Search = styled("div")`
   border-radius: 20px;
-  background-color: #fff;
+  background-color: ${(props) => props.theme.palette.background.paper};
   width: 183px;
   height: 38px;
-  border-color: #707070;
+  border-color: ${(props) => props.theme.palette.info.light};
   border-width: 1px;
   border-style: solid;
   display: flex;
@@ -18,13 +17,13 @@ const Search = styled.div`
   padding: 10px;
 `;
 
-const SearchIconWrapper = styled.div`
+const SearchIconWrapper = styled("div")`
   height: 100%;
   pointer-events: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #9d9d9d;
+  color: ${(props) => props.theme.palette.text.secondary};
 `;
 
 const StyledTextField = styled(TextField)`
@@ -33,17 +32,17 @@ const StyledTextField = styled(TextField)`
   & input::placeholder {
     font-style: italic;
     font-size: 16px;
-    color: #9d9d9d;
+    color: ${(props) => props.theme.palette.text.secondary};
   }
 `;
 
-const CloseIconWrapper = styled.div`
+const CloseIconWrapper = styled("div")`
   height: 100%;
   pointer-events: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #9d9d9d;
+  color: ${(props) => props.theme.palette.text.secondary};
 `;
 
 const OutlineSearchRec17 = ({

@@ -1,12 +1,11 @@
-import styled from "@emotion/styled";
-import { Button } from "@mui/material";
+import { Button, styled } from "@mui/material";
 import React from "react";
 import { ReactComponent as Add } from "../../assets/icons/ic_uploader_add.svg";
 import { ButtonCTAWithIconProps } from "./ButtonCTAWithIcon.types";
 
 const StyledButton = styled(Button)`
-  background-color: #009ccd;
-  color: #fff;
+  background-color: ${(props) => props.theme.palette.primary.main};
+  color: ${(props) => props.theme.palette.primary.contrastText};
   width: 189px;
   height: 38px;
   border-radius: 19px;

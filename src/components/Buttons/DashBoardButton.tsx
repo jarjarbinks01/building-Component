@@ -1,5 +1,4 @@
-import styled from "@emotion/styled";
-import { Button } from "@mui/material";
+import { Button, styled } from "@mui/material";
 import React from "react";
 import { DashBoardButtonProps } from "./DashBoardButton.types";
 
@@ -30,13 +29,13 @@ const StyledButton = styled(Button)`
   }
 `;
 
-const StyledSvgContainer = styled.div`
+const StyledSvgContainer = styled("div")`
   display: flex;
   align-items: center;
   fill: currentcolor;
 `;
 
-const StyledText = styled.div`
+const StyledText = styled("div")`
   flex: 0;
   line-height: 17px;
 `;

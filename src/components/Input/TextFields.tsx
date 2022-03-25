@@ -1,10 +1,9 @@
-import styled from "@emotion/styled";
-import { TextField } from "@mui/material";
+import { styled, TextField } from "@mui/material";
 import React from "react";
 import { TextFieldProps } from "./TextFields.types";
 
-const StyledContainer = styled.div``;
-const StyledLabel = styled.p`
+const StyledContainer = styled("div")``;
+const StyledLabel = styled("p")`
   color: #42526e;
   font-size: 13px;
   text-align: left;
