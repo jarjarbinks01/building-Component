@@ -24,8 +24,11 @@ declare module "@mui/material/styles/createPalette" {
   }
 
   interface PaletteOptions {
-    newPaleete1?: PaletteColorOptions;
-    newPaleete2?: PaletteColorOptions;
+    primaryButtonColor1?: PaletteColorOptions;
+    primaryButtonColor2?: PaletteColorOptions;
+    secondaryButtonColor1?: PaletteColorOptions;
+    secondaryButtonColor2?: PaletteColorOptions;
+    secondaryButtonColor3?: PaletteColorOptions;
   }
 }
 
@@ -60,14 +63,32 @@ const theme2 = createTheme({
       secondary: "#9D9D9D",
     },
     background: {
-      default: "#f3f9f9",
+      default: "#F2F2F2",
       paper: "#ffffff",
     },
-    newPaleete1: {
-      main: "#E67E23",
-      light: "#4B5CA5",
+    primaryButtonColor1: {
+      main: "#EF841F",
+      light: "#EF9F1F",
       contrastText: "#ffffff",
-      title: "#ffffff",
+    },
+    primaryButtonColor2: {
+      main: "#2D9FC3",
+      light: "#1DB0DE",
+      contrastText: "#ffffff",
+    },
+    secondaryButtonColor1: {
+      main: "#CF2E76",
+      light: "#EB3E8B",
+      contrastText: "#ffffff",
+    },
+    secondaryButtonColor2: {
+      main: "#F06363",
+      contrastText: "#ffffff",
+    },
+    secondaryButtonColor3: {
+      main: "#2FCC71",
+      light: "#57E392",
+      contrastText: "#ffffff",
     },
   },
   typography: {

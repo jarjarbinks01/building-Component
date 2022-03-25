@@ -17,15 +17,18 @@ import {
   SelectField,
   TextFields,
   ButtonCTAWithIcon,
+  RadioButton,
 } from "./components";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { ReactComponent as Task } from "./assets/icons/Task.svg";
 import { ReactComponent as MemberEnquiry } from "./assets/icons/MemberEnquiry.svg";
-import { Button } from "@mui/material";
+import { Button, FormControlLabel } from "@mui/material";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-
+import FormControl from '@mui/material/FormControl';
+import FormLabel from '@mui/material/FormLabel';
+import RadioGroup from '@mui/material/RadioGroup';
 const data = [
   {
     name: "Test Title 1",
@@ -59,7 +62,6 @@ function App() {
       alert(JSON.stringify(values, null, 2));
     },
   });
-
   return (
     <Router>
       <GlobalStyle />
@@ -144,7 +146,16 @@ function App() {
           <SearchButton id="test filter" text="SEARCH" />
         </form>
       </Accordions>
-
+      <FormControl>
+      <RadioGroup
+        defaultValue="female"
+        aria-labelledby="demo-customized-radios"
+        name="customized-radios"
+      >
+        <FormControlLabel value="female" control={<RadioButton />} label=" " />
+        <FormControlLabel value="male" control={<RadioButton />} label=" " />
+      </RadioGroup>
+    </FormControl>
       <>
         <Button>Test for Theme</Button>
     <br></br>
@@ -217,6 +228,124 @@ function App() {
         <Box sx={{ bgcolor: 'text.secondary', color: 'background.paper', p: 2 }}>
           Text.Secondary #9D9D9D
         </Box>
+      </Grid>
+    </Grid>
+    <br></br>
+    <br></br>
+    <Grid container spacing={1}>
+      <Grid item xs={5} sm={9}>
+        <Box sx={{ paddingTop: 1, paddingLeft: 2, typography: 'h4' }}>Background Color</Box>
+        </Grid>
+        <Grid item xs={12} sm={4}>
+        <Box sx={{ bgcolor: 'background.default', color: 'background.contrastText', p: 2 }}>
+          Background #F3F9F9
+        </Box>
+      </Grid>
+      <Grid item xs={12} sm={4}>
+        <Box sx={{ boxShadow: 1, bgcolor: 'background.paper', color: 'background.contrastText', p: 2 }}>
+          Paper #FFFFFF
+        </Box>
+      </Grid>
+      </Grid>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <Grid container spacing={1}>
+      <Grid item xs={5} sm={9}>
+        <Box sx={{ paddingTop: 1, paddingLeft: 2, typography: 'h4' }}>Button Color Scheme</Box>
+      </Grid>
+      <Grid item xs={5} sm={9}>
+        <Box sx={{ paddingTop: 1, paddingLeft: 2, typography: 'body2' }}>Primary Button</Box>
+      </Grid>
+    <Grid item xs={12} sm={6}>
+    <Box
+      sx={{ paddingLeft: 5, paddingTop: 2, paddingBottom: 2, backgroundColor: 'primaryButtonColor1.main',
+        '&:hover': { backgroundColor: 'primaryButtonColor1.light',}, color: 'primaryButtonColor1.contrastText'}}>
+      PrimaryButton1 / primaryButtonColor1.main / #EF841F
+      <br></br>
+      <br></br>
+      PrimaryButton1Hover / primaryButtonColor1.light / #EF9F1F
+    </Box>
+      </Grid>
+      <Grid item xs={12} sm={6}>
+      <Box
+      sx={{paddingLeft: 5, paddingTop: 2, paddingBottom: 2, backgroundColor: 'primaryButtonColor2.main',
+        '&:hover': { backgroundColor: 'primaryButtonColor2.light',},color: 'primaryButtonColor2.contrastText'}}>
+      PrimaryButton2 / primaryButtonColor2.main / #2D9FC3
+      <br></br>
+      <br></br>
+      PrimaryButton2Hover / primaryButtonColor2.light / #1DB0DE
+    </Box>
+      </Grid>
+      </Grid>
+      <br></br>
+      <br></br>
+      <Grid container spacing={1}>
+      <Grid item xs={5} sm={9}>
+        <Box sx={{ paddingTop: 1, paddingLeft: 2, typography: 'body2' }}>Secondary Button</Box>
+      </Grid>
+      <Grid item xs={12} sm={6}>
+        <Box sx={{ paddingLeft: 5, paddingTop: 2, paddingBottom: 2,border: 2, borderColor: 'primaryButtonColor1.main', color: 'primaryButtonColor1.main',
+        '&:hover': { borderColor: 'primaryButtonColor1.light', backgroundColor: 'primaryButtonColor1.light', color: 'primaryButtonColor1.contrastText',}}}>
+          SecondaryOutlinedButton1 / primaryButtonColor1.main / #EF841F
+          <br></br>
+          <br></br>
+          SecondaryOutlinedButton1Hover / primaryButtonColor1.light / #EF9F1F
+        </Box>
+      </Grid>
+      <Grid item xs={12} sm={6}>
+        <Box sx={{ paddingLeft: 5, paddingTop: 2, paddingBottom: 2, border: 2, borderColor: 'primaryButtonColor2.main', color: 'primaryButtonColor2.main',
+        '&:hover': { borderColor: 'primaryButtonColor2.light', backgroundColor: 'primaryButtonColor2.light', color: 'primaryButtonColor2.contrastText',}}}>
+          SecondaryOutlinedButton2 / primaryButtonColor2.main / #2D9FC3
+          <br></br>
+          <br></br>
+          SecondaryOutlinedButton2Hover / primaryButtonColor2.light / #1DB0DE
+        </Box>
+      </Grid>
+      </Grid>
+      <br></br>
+      <br></br>
+      <Grid container spacing={1}>
+      <Grid item xs={5} sm={9}>
+        <Box sx={{ paddingTop: 1, paddingLeft: 2, typography: 'body2' }}>Secondary Button: Alert</Box>
+      </Grid>
+      <Grid item xs={12} sm={6}>
+      <Box
+      sx={{ paddingLeft: 5, paddingTop: 2, paddingBottom: 2,border: 2, backgroundColor: 'secondaryButtonColor1.main',
+        '&:hover': { backgroundColor: 'secondaryButtonColor1.light',},color: 'secondaryButtonColor1.contrastText'}}
+    >
+      SecondaryButton1  /  secondaryButtonColor1.main  /  #CF2E76
+      <br></br>
+      <br></br>
+      SecondaryButton1Hover  /  secondaryButtonColor1.light  /  #EB3E8B
+    </Box>
+      </Grid>
+      <Grid item xs={12} sm={6}>
+        <Box sx={{ paddingLeft: 5, paddingTop: 2, paddingBottom: 2,border: 2, display: 'flex', borderColor: 'secondaryButtonColor2.main', color: 'secondaryButtonColor2.main',
+        '&:hover': { backgroundColor: 'secondaryButtonColor2.main', color: 'secondaryButtonColor2.contrastText',}}}>
+          SecondaryButton2 / Outlined / secondaryButtonColor2.main / #F06363
+          <br></br>
+          <br></br>
+          SecondaryButton2Hover / secondaryButtonColor2.main / #F06363
+        </Box>
+      </Grid>
+      </Grid>
+      <br></br>
+      <br></br>
+      <Grid container spacing={1}>
+      <Grid item xs={5} sm={9}>
+        <Box sx={{ paddingTop: 1, paddingLeft: 2, typography: 'body2' }}>Secondary Button: Approve</Box>
+      </Grid>
+      <Grid item xs={12} sm={6}>
+      <Box
+      sx={{ paddingLeft: 5, paddingTop: 2, paddingBottom: 2, backgroundColor: 'secondaryButtonColor3.main',
+        '&:hover': {backgroundColor: 'secondaryButtonColor3.light',},color: 'secondaryButtonColor3.contrastText'}}>
+      SecondaryButton3 / secondaryButtonColor3.main / #2FCC71
+      <br></br>
+      <br></br>
+      SecondaryButton3Hover / secondaryButtonColor3.light / #57E392
+    </Box>
       </Grid>
     </Grid>
     <br></br>

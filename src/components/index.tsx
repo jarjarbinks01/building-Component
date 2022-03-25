@@ -16,7 +16,7 @@ import BasicDateRangePicker from "./Input/BasicDateRangePicker";
 import Footer from "./Footer/Footer";
 import OutlineButtonClear from "./Buttons/OutlineButtonClear";
 import ButtonCTAWithIcon from "./Buttons/ButtonCTAWithIcon";
-
+import RadioButton from "./SelectionControls/RadioButton";
 export {
   Navbar,
   ButtonGeneralCTA,
@@ -35,5 +35,6 @@ export {
   BasicDateRangePicker,
   Footer,
   OutlineButtonClear,
-  ButtonCTAWithIcon
+  ButtonCTAWithIcon,
+  RadioButton,
 };

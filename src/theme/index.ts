@@ -3,6 +3,38 @@ import { createTheme } from "@mui/material/styles";
 import { typography } from "@mui/system";
 import { spacing } from '@mui/system';
 
+declare module "@mui/material/styles" {
+  interface Theme {
+    newProp1: {
+      main: string;
+      light: string;
+      primary?: string;
+    };
+  }
+  // allow configuration using `createTheme`
+  interface ThemeOptions {
+    newProp1?: {
+      main: string;
+      light: string;
+      primary?: string;
+    };
+  }
+}
+
+declare module "@mui/material/styles/createPalette" {
+  interface SimplePaletteColorOptions {
+    title?: string;
+  }
+
+  interface PaletteOptions {
+    primaryButtonColor1?: PaletteColorOptions;
+    primaryButtonColor2?: PaletteColorOptions;
+    secondaryButtonColor1?: PaletteColorOptions;
+    secondaryButtonColor2?: PaletteColorOptions;
+    secondaryButtonColor3?: PaletteColorOptions;
+  }
+}
+
 const theme = createTheme({
   palette: {
     primary: {
@@ -36,6 +68,30 @@ const theme = createTheme({
       default: '#f3f9f9',
       paper: '#ffffff',
     },
+      primaryButtonColor1: {
+        main: "#EF841F",
+        light: "#EF9F1F",
+        contrastText: "#ffffff",
+      },
+      primaryButtonColor2: {
+        main: "#2D9FC3",
+        light: "#1DB0DE",
+        contrastText: "#ffffff",
+      },
+      secondaryButtonColor1: {
+        main: "#CF2E76",
+        light: "#EB3E8B",
+        contrastText: "#ffffff",
+      },
+      secondaryButtonColor2: {
+        main: "#F06363",
+        contrastText: "#ffffff",
+      },
+      secondaryButtonColor3: {
+        main: "#2FCC71",
+        light: "#57E392",
+        contrastText: "#ffffff",
+      },
   },
   typography: {
     h1: {
