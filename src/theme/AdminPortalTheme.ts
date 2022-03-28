@@ -24,6 +24,7 @@ declare module "@mui/material/styles/createPalette" {
   }
 
   interface PaletteOptions {
+    additionalColor6?: PaletteColorOptions;
     primaryButtonColor1?: PaletteColorOptions;
     primaryButtonColor2?: PaletteColorOptions;
     secondaryButtonColor1?: PaletteColorOptions;
@@ -32,21 +33,20 @@ declare module "@mui/material/styles/createPalette" {
   }
 }
 
-const theme2 = createTheme({
+const AdminPortalTheme = createTheme({
   palette: {
     primary: {
-      main: "#E67E23",
-      light: "#E67E23",
+      main: "#009CCD",
+      light: "#0D6A88",
       contrastText: "#ffffff",
       title: "#ffffff",
     },
     secondary: {
-      main: "#2D9FC3",
+      main: "#EF841F",
       contrastText: "#ffffff",
     },
     success: {
       main: "#2FCC71",
-      light: "#ffffff",
       contrastText: "#ffffff",
     },
     warning: {
@@ -54,17 +54,21 @@ const theme2 = createTheme({
       contrastText: "#ffffff",
     },
     info: {
-      main: "#F06363",
-      light: "#bcbcbc",
-      dark: "#ffffff",
+      main: "#777777",
+      light: "#ED562D",
+      dark: "#EF9F1F",
     },
     text: {
       primary: "#3d4f76",
       secondary: "#9D9D9D",
     },
     background: {
-      default: "#F2F2F2",
+      default: "#f3f9f9",
       paper: "#ffffff",
+    },
+    additionalColor6: {
+      main: "#FFCE00",
+      contrastText: "#333333",
     },
     primaryButtonColor1: {
       main: "#EF841F",
@@ -96,31 +100,31 @@ const theme2 = createTheme({
       fontSize: 42,
       fontFamily: "Roboto",
       fontWeight: 300,
-      color: "#E67E23",
+      color: "#009CCD",
     },
     h2: {
       fontSize: 26,
       fontFamily: "Roboto",
-      fontWeight: 700,
-      color: "#E67E23",
+      fontWeight: 500,
+      color: "#009CCD",
     },
     h3: {
-      fontSize: 20,
+      fontSize: 22,
       fontFamily: "Roboto",
       fontWeight: 700,
-      color: "#2C90AD",
+      color: "#EF9F1F",
     },
     h4: {
-      fontSize: 19,
+      fontSize: 20,
       fontFamily: "Roboto",
-      fontWeight: 700,
-      color: "#42526E",
+      fontWeight: 500,
+      color: "#009CCD",
     },
     h5: {
       fontSize: 14,
       fontFamily: "Roboto",
-      fontWeight: 500,
-      color: "#2D9FC3",
+      fontWeight: 700,
+      color: "#3D4F76",
     },
     body1: {
       fontSize: 14,
@@ -165,27 +169,27 @@ const theme2 = createTheme({
   components: {
     MuiButton: {
       defaultProps: {
-        size: 'small',
+        size: "small",
       },
     },
     MuiFilledInput: {
       defaultProps: {
-        margin: 'dense',
+        margin: "dense",
       },
     },
     MuiFormControl: {
       defaultProps: {
-        margin: 'dense',
+        margin: "dense",
       },
     },
     MuiFormHelperText: {
       defaultProps: {
-        margin: 'dense',
+        margin: "dense",
       },
     },
     MuiIconButton: {
       defaultProps: {
-        size: 'small',
+        size: "small",
       },
       styleOverrides: {
         sizeSmall: {
@@ -198,12 +202,12 @@ const theme2 = createTheme({
     },
     MuiInputBase: {
       defaultProps: {
-        margin: 'dense',
+        margin: "dense",
       },
     },
     MuiInputLabel: {
       defaultProps: {
-        margin: 'dense',
+        margin: "dense",
       },
     },
     MuiListItem: {
@@ -213,27 +217,27 @@ const theme2 = createTheme({
     },
     MuiOutlinedInput: {
       defaultProps: {
-        margin: 'dense',
+        margin: "dense",
       },
     },
     MuiFab: {
       defaultProps: {
-        size: 'small',
+        size: "small",
       },
     },
     MuiTable: {
       defaultProps: {
-        size: 'small',
+        size: "small",
       },
     },
     MuiTextField: {
       defaultProps: {
-        margin: 'dense',
+        margin: "dense",
       },
     },
     MuiToolbar: {
       defaultProps: {
-        variant: 'dense',
+        variant: "dense",
       },
     },
   },
@@ -254,10 +258,7 @@ const theme2 = createTheme({
   },
   spacing: 10,
 });
-theme2.spacing(3);
-theme2.spacing(4);
+AdminPortalTheme.spacing(3);
+AdminPortalTheme.spacing(4);
 
-
-
-
-export default theme2;
+export default AdminPortalTheme;

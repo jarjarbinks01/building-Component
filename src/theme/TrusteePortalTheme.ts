@@ -39,7 +39,7 @@ declare module "@mui/material/styles/createPalette" {
   }
 }
 
-const theme = createTheme({
+const TrusteePortalTheme = createTheme({
   palette: {
     primary: {
       main: "#009CCD",
@@ -255,7 +255,7 @@ const theme = createTheme({
   },
   spacing: 10,
 });
-theme.spacing(3);
-theme.spacing(4);
+TrusteePortalTheme.spacing(3);
+TrusteePortalTheme.spacing(4);
 
-export default theme;
+export default TrusteePortalTheme;
