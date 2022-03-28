@@ -210,15 +210,13 @@ function App() {
         <br></br>
         <br></br>
         <br></br>
+        <Box sx={{ paddingTop: 1, paddingLeft: 2, typography: "h1" }}>
+          Trustee Portal
+        </Box>
         <Grid container spacing={1}>
           <Grid item xs={5} sm={9}>
-            <Box sx={{ paddingTop: 1, paddingLeft: 2, typography: "h1" }}>
-              Color Scheme
-            </Box>
-          </Grid>
-          <Grid item xs={5} sm={9}>
             <Box sx={{ paddingTop: 1, paddingLeft: 2, typography: "h4" }}>
-              Trustee Portal
+              Color Scheme
             </Box>
           </Grid>
           <Grid item xs={12} sm={4}>
@@ -545,13 +543,8 @@ function App() {
         <br></br>
         <Grid container spacing={3}>
           <Grid item xs={5} sm={12}>
-            <Box sx={{ paddingTop: 1, paddingLeft: 2, typography: "h1" }}>
-              Typography
-            </Box>
-          </Grid>
-          <Grid item xs={5} sm={12}>
             <Box sx={{ paddingTop: 1, paddingLeft: 2, typography: "h4" }}>
-              Trustee Portal & Admin Portal{" "}
+              Typography
             </Box>
           </Grid>
           <Grid item xs={12} sm={2}>
@@ -637,13 +630,8 @@ function App() {
         <br></br>
         <Grid container spacing={3}>
           <Grid item xs={5} sm={12}>
-            <Box sx={{ paddingTop: 1, paddingLeft: 2, typography: "h1" }}>
-              Spacing
-            </Box>
-          </Grid>
-          <Grid item xs={5} sm={12}>
             <Box sx={{ paddingTop: 1, paddingLeft: 2, typography: "h4" }}>
-              Trustee Portal, MPFA Portal & Admin Portal{" "}
+              Spacing
             </Box>
           </Grid>
           <Grid item xs={12} sm={10}>
