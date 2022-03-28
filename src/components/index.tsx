@@ -14,6 +14,7 @@ import Footer from "./Footer/Footer";
 import BasicDateRangePicker from "./Input/BasicDateRangePicker";
 import DatePickerCommon from "./Input/DatePickerCommon";
 import DropDownAutoComplete from "./Input/DropDownAutoComplete";
+import DropDownWithSwitch from "./Input/DropDownWithSwitch";
 import OutlineSearchRec17 from "./Input/OutlineSearchRec17";
 import SelectField from "./Input/SelectField";
 import TextFields from "./Input/TextFields";
@@ -42,4 +43,5 @@ export {
   RadioButton,
   DropDownAutoComplete,
   ArrowButtonTrustee,
+  DropDownWithSwitch,
 };

@@ -4,7 +4,14 @@ declare module "@mui/material/styles/createPalette" {
   interface SimplePaletteColorOptions {
     title?: string;
   }
-
+  interface Palette {
+    additionalColor6: Palette["primary"];
+    primaryButtonColor1: Palette["primary"];
+    primaryButtonColor2: Palette["primary"];
+    secondaryButtonColor1: Palette["primary"];
+    secondaryButtonColor2: Palette["primary"];
+    secondaryButtonColor3: Palette["primary"];
+  }
   interface PaletteOptions {
     additionalColor6?: PaletteColorOptions;
     primaryButtonColor1?: PaletteColorOptions;

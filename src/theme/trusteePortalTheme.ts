@@ -12,6 +12,7 @@ declare module "@mui/material/styles/createPalette" {
     secondaryButtonColor2: Palette["primary"];
     secondaryButtonColor3: Palette["primary"];
   }
+
   interface PaletteOptions {
     primaryButtonColor1?: PaletteColorOptions;
     primaryButtonColor2?: PaletteColorOptions;

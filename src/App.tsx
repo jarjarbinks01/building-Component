@@ -20,6 +20,7 @@ import {
   DashBoardButton,
   DatePickerCommon,
   DropDownAutoComplete,
+  DropDownWithSwitch,
   Footer,
   Navbar,
   OutlineButtonRec107,
@@ -58,6 +59,21 @@ const mPFScheme = [
   { title: "MPF Scheme G" },
 ];
 
+const filterProps = [
+  { title: "Name" },
+  { title: "Staff ID" },
+  { title: "Member Account No." },
+  { title: "HKID / Passport No." },
+  { title: "Account Status" },
+  { title: "Contribution Period Start Date" },
+  { title: "Contribution Period End Date" },
+  { title: "RI" },
+  { title: "ERMC" },
+  { title: "EEMC" },
+  { title: "EEVC" },
+  { title: "EEVC2" },
+];
+
 function App() {
   const formik = useFormik({
     initialValues: {
@@ -65,6 +81,7 @@ function App() {
       ApplicationType: "",
       date: null,
       scheme: null,
+      filterProps: undefined,
     },
     validationSchema: Yup.object({
       refNo: Yup.string().min(5, "Must be 5 characters at least"),
@@ -190,6 +207,18 @@ function App() {
                     }}
                     options={mPFScheme.map((option) => option.title)}
                     placeholder={"Please Input"}
+                  />
+                </Grid>
+                <Grid item sm={10}>
+                  <DropDownWithSwitch
+                    id={"dropdown with switch"}
+                    options={filterProps.map((option) => option.title)}
+                    placeholder={"Please Input"}
+                    label={"Dropdown with switch"}
+                    value={formik.values.filterProps}
+                    onChange={(event: any, newValue: any) => {
+                      formik.setFieldValue("filterProps", newValue);
+                    }}
                   />
                 </Grid>
                 <Grid item sm={3}>
