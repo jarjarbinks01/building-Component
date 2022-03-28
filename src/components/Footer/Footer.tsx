@@ -87,9 +87,9 @@ const Footer = () => {
               onClick={() => console.log("clear")}
             />
             <OutlineButtonSave
-              id="test back"
-              text="back"
-              onClick={() => console.log("back")}
+              id="test save"
+              text="Save"
+              onClick={() => console.log("save")}
             />
             <ButtonGeneralCTA
               id="test371"

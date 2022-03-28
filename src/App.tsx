@@ -23,7 +23,6 @@ import {
   Footer,
   Navbar,
   OutlineButtonRec107,
-  OutlineSearchRec17,
   SearchButton,
   SelectField,
   TextFields,
@@ -126,11 +125,7 @@ function App() {
             text="FILTER"
             onClick={() => console.log("clear")}
           />
-          <OutlineSearchRec17
-            name={"quickSearch"}
-            id={"quickSearch"}
-            placeholder={"Quick Search"}
-          />
+
           <ClearButton
             id="test clear"
             text="CLEAR"

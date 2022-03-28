@@ -1,6 +1,6 @@
 import CloseIcon from "@mui/icons-material/Close";
 import SearchIcon from "@mui/icons-material/Search";
-import { styled, TextField } from "@mui/material";
+import { IconButton, styled, TextField } from "@mui/material";
 import React from "react";
 import { OutlineSearchRec17Props } from "./OutlineSearchRec17.types";
 
@@ -36,9 +36,9 @@ const StyledTextField = styled(TextField)`
   }
 `;
 
-const CloseIconWrapper = styled("div")`
+const CloseIconWrapper = styled(IconButton)`
   height: 100%;
-  pointer-events: none;
+  width: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
