@@ -3,7 +3,7 @@ import React from "react";
 import { ClearButtonProps } from "./ClearButton.types";
 
 const StyledButton = styled(Button)`
-  border-color: ${(props) => props.theme.palette.info.main};
+  border-color: ${(props) => props.theme.palette.secondaryButtonColor2.main};
   border-width: 2px;
   border-style: solid;
   width: 107px;
@@ -11,17 +11,18 @@ const StyledButton = styled(Button)`
   border-radius: 19px;
 
   font-size: 14px;
-  color: ${(props) => props.theme.palette.info.main};
+  color: ${(props) => props.theme.palette.secondaryButtonColor2.main};
   letter-spacing: 0.5px;
   text-align: center;
   text-transform: uppercase;
 
   &:hover {
     border-width: 2px;
-    border-color: ${(props) => props.theme.palette.info.main};
-    background-color: ${(props) => props.theme.palette.info.main};
+    border-color: ${(props) => props.theme.palette.secondaryButtonColor2.main};
+    background-color: ${(props) =>
+      props.theme.palette.secondaryButtonColor2.main};
     box-shadow: none;
-    color: ${(props) => props.theme.palette.background.paper};
+    color: ${(props) => props.theme.palette.secondaryButtonColor2.contrastText};
   }
 `;
 

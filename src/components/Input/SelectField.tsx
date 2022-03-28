@@ -4,23 +4,25 @@ import { SelectFieldProps } from "./SelectField,types";
 
 const StyledContainer = styled("div")``;
 const StyledLabel = styled("p")`
-  color: #42526e;
-  font-size: 13px;
+  color: ${(props) => props.theme.typography.body1.color};
+  font-size: ${(props) => props.theme.typography.body1.fontSize};
   text-align: left;
+  margin-bottom: 8px; //temp style
 `;
 const StyledPlaceHolder = styled("div")`
-  font-style: italic;
-  color: #9d9d9d;
-  opacity: 0.5;
+  font-style: ${(props) => props.theme.typography.caption.fontStyle};
+  color: ${(props) => props.theme.typography.caption.color};
+  font-size: ${(props) => props.theme.typography.caption.fontSize};
+  opacity: 0.4;
 `;
 
 const StyledError = styled("div")`
-  color: #d32f2f;
+  color: ${(props) => props.theme.palette.warning.main};
 `;
 
 const StyledMenuItem = styled(MenuItem)`
   &:focus {
-    color: #009ccd;
+    color: ${(props) => props.theme.palette.primary.main};
     font-weight: bold;
   }
 `;

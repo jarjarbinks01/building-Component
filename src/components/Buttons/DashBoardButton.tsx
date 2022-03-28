@@ -3,29 +3,29 @@ import React from "react";
 import { DashBoardButtonProps } from "./DashBoardButton.types";
 
 const StyledButton = styled(Button)`
-  color: #42526e;
+  color: ${(props) => props.theme.palette.text.primary};
   width: 160px;
   display: flex;
   justify-content: flex-start;
 
   &:focus {
-    color: #ef841f;
+    color: ${(props) => props.theme.palette.secondary.main};
     font-weight: bold;
     &:hover,
     &.Mui-focusVisible {
       border-width: 2;
       border-radius: 5px;
       box-shadow: none;
-      color: #fff;
+      color: ${(props) => props.theme.palette.secondary.contrastText};
     }
   }
   &:hover,
   &.Mui-focusVisible {
     border-width: 2;
     border-radius: 5px;
-    background-color: #ef841f;
+    background-color: ${(props) => props.theme.palette.secondary.main};
     box-shadow: none;
-    color: #fff;
+    color: ${(props) => props.theme.palette.secondary.contrastText};
   }
 `;
 

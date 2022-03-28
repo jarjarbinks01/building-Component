@@ -1,14 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import edit from "../../assets/icons/Edit.svg";
+import employee from "../../assets/icons/Employee.svg";
+import employer from "../../assets/icons/Employer.svg";
 import { FooterContainer } from "../../globalStyles";
 import ButtonGeneralCTA from "../Buttons/ButtonGeneralCTA";
 import FloatingIconButton from "../Buttons/FloatingIconButton";
 import OutlineButtonClear from "../Buttons/OutlineButtonClear";
 import OutlineButtonSave from "../Buttons/OutlineButtonSave";
-
-import edit from "../../assets/icons/Edit.svg";
-import employee from "../../assets/icons/Employee.svg";
-import employer from "../../assets/icons/Employer.svg";
 
 const Nav = styled.nav`
   background: rgb(66, 82, 110, 0.77);
@@ -56,28 +55,28 @@ const Footer = () => {
   return (
     <Nav>
       <FootContainer>
-          <StyledIconContainer>
-        <FloatingIconButton
-          id={"edit"}
-          ariaLabel={"edit icon"}
-          onClick={() => console.log("edit")}
-          src={edit}
-          alt={"edit"}
-        />
-        <FloatingIconButton
-          id={"employee"}
-          ariaLabel={"employee icon"}
-          onClick={() => console.log("employee")}
-          src={employee}
-          alt={"employee"}
-        />
-        <FloatingIconButton
-          id={"employer"}
-          ariaLabel={"employer icon"}
-          onClick={() => console.log("employer")}
-          src={employer}
-          alt={"employer"}
-        />
+        <StyledIconContainer>
+          <FloatingIconButton
+            id={"edit"}
+            ariaLabel={"edit icon"}
+            onClick={() => console.log("edit")}
+            src={edit}
+            alt={"edit"}
+          />
+          <FloatingIconButton
+            id={"employee"}
+            ariaLabel={"employee icon"}
+            onClick={() => console.log("employee")}
+            src={employee}
+            alt={"employee"}
+          />
+          <FloatingIconButton
+            id={"employer"}
+            ariaLabel={"employer icon"}
+            onClick={() => console.log("employer")}
+            src={employer}
+            alt={"employer"}
+          />
         </StyledIconContainer>
         <StyledContainer>
           <StyledStroke />

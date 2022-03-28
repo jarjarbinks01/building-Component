@@ -4,8 +4,8 @@ import { ReactComponent as Add } from "../../assets/icons/ic_uploader_add.svg";
 import { ButtonCTAWithIconProps } from "./ButtonCTAWithIcon.types";
 
 const StyledButton = styled(Button)`
-  background-color: ${(props) => props.theme.palette.primary.main};
-  color: ${(props) => props.theme.palette.primary.contrastText};
+  background-color: ${(props) => props.theme.palette.primaryButtonColor2.main};
+  color: ${(props) => props.theme.palette.primaryButtonColor2.contrastText};
   width: 189px;
   height: 38px;
   border-radius: 19px;
@@ -20,7 +20,8 @@ const StyledButton = styled(Button)`
   font-weight: bold;
 
   &:hover {
-    background-color: #1db0de;
+    background-color: ${(props) =>
+      props.theme.palette.primaryButtonColor2.light};
     box-shadow: none;
   }
 `;

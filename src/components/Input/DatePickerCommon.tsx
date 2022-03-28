@@ -8,16 +8,16 @@ import { DatePickerCommonProps } from "./DatePickerCommon.types";
 const StyledContainer = styled("div")``;
 
 const StyledLabel = styled("p")`
-  color: #42526e;
-  font-size: 13px;
+  color: ${(props) => props.theme.typography.body1.color};
+  font-size: ${(props) => props.theme.typography.body1.fontSize};
   text-align: left;
 `;
 
 const StyledTextField = styled(TextField)`
   & input::placeholder {
-    font-style: italic;
-    font-size: 16px;
-    color: #9d9d9d;
+    font-style: ${(props) => props.theme.typography.caption.fontStyle};
+    font-size: ${(props) => props.theme.typography.caption.fontSize};
+    color: ${(props) => props.theme.typography.caption.color};
   }
 `;
 

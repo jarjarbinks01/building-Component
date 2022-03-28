@@ -14,13 +14,13 @@ const StyledTooltip = styled((props: any) => (
   <Tooltip classes={{ popper: props.className }} {...props} />
 ))`
   & .MuiTooltip-tooltip {
-    background-color: #42526e;
+    background-color: ${(props) => props.theme.palette.text.primary};
     box-shadow: 0px 2px 5px #00000029;
     border-radius: 6px;
     font-size: 14px;
   }
   & .MuiTooltip-arrow {
-    color: #42526e;
+    color: ${(props) => props.theme.palette.text.primary};
   }
 `;
 

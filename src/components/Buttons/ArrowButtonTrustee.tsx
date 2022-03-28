@@ -13,16 +13,16 @@ const StyledSvgContainer = styled("div")`
   display: flex;
   margin-top: 5px; //temp style
   circle {
-    fill: #fff;
+    fill: ${(props) => props.theme.palette.primaryButtonColor2.contrastText};
   }
   path {
-    fill: #009ccd;
+    fill: ${(props) => props.theme.palette.primaryButtonColor2.main};
   }
   &:hover circle {
-    fill: #009ccd;
+    fill: ${(props) => props.theme.palette.primaryButtonColor2.main};
   }
   &:hover path {
-    fill: #fff;
+    fill: ${(props) => props.theme.palette.primaryButtonColor2.contrastText};
   }
 `;
 

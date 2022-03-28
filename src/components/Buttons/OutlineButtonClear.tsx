@@ -3,7 +3,8 @@ import React from "react";
 import { OutlineButtonClearProps } from "./OutlineButtonClear.types";
 
 const StyledButton = styled(Button)`
-  border-color: #ffffff;
+  border-color: ${(props) =>
+    props.theme.palette.secondaryButtonColor1.contrastText};
   border-width: 2px;
   border-style: solid;
   width: 107px;
@@ -12,7 +13,7 @@ const StyledButton = styled(Button)`
   margin: 5px;
 
   font-size: 14px;
-  color: #ffffff;
+  color: ${(props) => props.theme.palette.secondaryButtonColor1.contrastText};
   letter-spacing: 0.5px;
   text-align: center;
   font-weight: bold;
@@ -20,9 +21,10 @@ const StyledButton = styled(Button)`
 
   &:hover {
     border-width: 2px;
-    border-color: #cf2e76;
+    border-color: ${(props) => props.theme.palette.secondaryButtonColor1.main};
     box-shadow: none;
-    background-color: #cf2e76;
+    background-color: ${(props) =>
+      props.theme.palette.secondaryButtonColor1.main};
     box-shadow: 0px 3px 6px #00000029;
   }
 `;

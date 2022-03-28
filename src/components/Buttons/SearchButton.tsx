@@ -3,8 +3,8 @@ import React from "react";
 import { SearchButtonProps } from "./SearchButton.types";
 
 const StyledButton = styled(Button)`
-  background-color: #ef841f;
-  color: #fff;
+  background-color: ${(props) => props.theme.palette.primaryButtonColor1.main};
+  color: ${(props) => props.theme.palette.primaryButtonColor1.contrastText};
   width: 107px;
   height: 38px;
   border-radius: 19px;
@@ -16,7 +16,8 @@ const StyledButton = styled(Button)`
   text-transform: uppercase;
 
   &:hover {
-    background-color: #ef9f1f;
+    background-color: ${(props) =>
+      props.theme.palette.primaryButtonColor1.light};
     box-shadow: none;
   }
 `;

@@ -1,7 +1,4 @@
-import { colors } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
-import { typography } from "@mui/system";
-import { spacing } from '@mui/system';
 
 declare module "@mui/material/styles" {
   interface Theme {
@@ -26,6 +23,13 @@ declare module "@mui/material/styles/createPalette" {
     title?: string;
   }
 
+  interface Palette {
+    primaryButtonColor1: Palette["primary"];
+    primaryButtonColor2: Palette["primary"];
+    secondaryButtonColor1: Palette["primary"];
+    secondaryButtonColor2: Palette["primary"];
+    secondaryButtonColor3: Palette["primary"];
+  }
   interface PaletteOptions {
     primaryButtonColor1?: PaletteColorOptions;
     primaryButtonColor2?: PaletteColorOptions;
@@ -38,116 +42,116 @@ declare module "@mui/material/styles/createPalette" {
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#009CCD',
-      light: '#4B5CA5',
-      contrastText: '#ffffff',
+      main: "#009CCD",
+      light: "#4B5CA5",
+      contrastText: "#ffffff",
     },
     secondary: {
-      main: '#EF841F',
-      contrastText: '#ffffff',
-    }, 
+      main: "#EF841F",
+      contrastText: "#ffffff",
+    },
     success: {
-      main: '#2FCC71',
-      light: '#CF2E76',
-      contrastText: '#ffffff',
+      main: "#2FCC71",
+      light: "#CF2E76",
+      contrastText: "#ffffff",
     },
     warning: {
-      main: '#F6354A',
-      contrastText: '#ffffff',
+      main: "#F6354A",
+      contrastText: "#ffffff",
     },
     info: {
-      main: '#f06363',
-      light: '#bcbcbc',
-      dark: '#9d4de1',
+      main: "#f06363",
+      light: "#bcbcbc",
+      dark: "#9d4de1",
     },
     text: {
-        primary: '#3d4f76',
-        secondary: '#9D9D9D',
+      primary: "#3d4f76",
+      secondary: "#9D9D9D",
     },
     background: {
-      default: '#f3f9f9',
-      paper: '#ffffff',
+      default: "#f3f9f9",
+      paper: "#ffffff",
     },
-      primaryButtonColor1: {
-        main: "#EF841F",
-        light: "#EF9F1F",
-        contrastText: "#ffffff",
-      },
-      primaryButtonColor2: {
-        main: "#2D9FC3",
-        light: "#1DB0DE",
-        contrastText: "#ffffff",
-      },
-      secondaryButtonColor1: {
-        main: "#CF2E76",
-        light: "#EB3E8B",
-        contrastText: "#ffffff",
-      },
-      secondaryButtonColor2: {
-        main: "#F06363",
-        contrastText: "#ffffff",
-      },
-      secondaryButtonColor3: {
-        main: "#2FCC71",
-        light: "#57E392",
-        contrastText: "#ffffff",
-      },
+    primaryButtonColor1: {
+      main: "#EF841F",
+      light: "#EF9F1F",
+      contrastText: "#ffffff",
+    },
+    primaryButtonColor2: {
+      main: "#2D9FC3",
+      light: "#1DB0DE",
+      contrastText: "#ffffff",
+    },
+    secondaryButtonColor1: {
+      main: "#CF2E76",
+      light: "#EB3E8B",
+      contrastText: "#ffffff",
+    },
+    secondaryButtonColor2: {
+      main: "#F06363",
+      contrastText: "#ffffff",
+    },
+    secondaryButtonColor3: {
+      main: "#2FCC71",
+      light: "#57E392",
+      contrastText: "#ffffff",
+    },
   },
   typography: {
     h1: {
       fontSize: 42,
-      fontFamily: 'Roboto',
+      fontFamily: "Roboto",
       fontWeight: 300,
-      color: '#009CCD',
+      color: "#009CCD",
     },
     h2: {
       fontSize: 26,
-      fontFamily: 'Roboto',
+      fontFamily: "Roboto",
       fontWeight: 500,
-      color: '#009CCD',
+      color: "#009CCD",
     },
     h3: {
       fontSize: 22,
-      fontFamily: 'Roboto',
+      fontFamily: "Roboto",
       fontWeight: 700,
-      color: '#EF9F1F',
+      color: "#EF9F1F",
     },
     h4: {
       fontSize: 20,
-      fontFamily: 'Roboto',
+      fontFamily: "Roboto",
       fontWeight: 500,
-      color: '#009CCD',
+      color: "#009CCD",
     },
     h5: {
       fontSize: 14,
-      fontFamily: 'Roboto',
+      fontFamily: "Roboto",
       fontWeight: 700,
-      color: '#3D4F76',
+      color: "#3D4F76",
     },
     body1: {
       fontSize: 14,
-      fontFamily: 'Roboto',
+      fontFamily: "Roboto",
       fontWeight: 400,
-      color: '#42526E',
+      color: "#42526E",
     },
     body2: {
-        fontSize: 16,
-        fontFamily: 'Roboto',
-        fontWeight: 700,
-        color: '#3D4F76',
+      fontSize: 16,
+      fontFamily: "Roboto",
+      fontWeight: 700,
+      color: "#3D4F76",
     },
     caption: {
       fontSize: 16,
-      fontStyle: 'Italic',
-      fontFamily: 'Roboto',
+      fontStyle: "Italic",
+      fontFamily: "Roboto",
       fontWeight: 300,
-      color: '#9D9D9D',
+      color: "#9D9D9D",
     },
     overline: {
       fontSize: 12,
-      fontFamily: 'Roboto',
+      fontFamily: "Roboto",
       fontWeight: 500,
-      color: '#F6354A',
+      color: "#F6354A",
     },
   },
   breakpoints: {
@@ -162,27 +166,27 @@ const theme = createTheme({
   components: {
     MuiButton: {
       defaultProps: {
-        size: 'small',
+        size: "small",
       },
     },
     MuiFilledInput: {
       defaultProps: {
-        margin: 'dense',
+        margin: "dense",
       },
     },
     MuiFormControl: {
       defaultProps: {
-        margin: 'dense',
+        margin: "dense",
       },
     },
     MuiFormHelperText: {
       defaultProps: {
-        margin: 'dense',
+        margin: "dense",
       },
     },
     MuiIconButton: {
       defaultProps: {
-        size: 'small',
+        size: "small",
       },
       styleOverrides: {
         sizeSmall: {
@@ -195,12 +199,12 @@ const theme = createTheme({
     },
     MuiInputBase: {
       defaultProps: {
-        margin: 'dense',
+        margin: "dense",
       },
     },
     MuiInputLabel: {
       defaultProps: {
-        margin: 'dense',
+        margin: "dense",
       },
     },
     MuiListItem: {
@@ -210,27 +214,27 @@ const theme = createTheme({
     },
     MuiOutlinedInput: {
       defaultProps: {
-        margin: 'dense',
+        margin: "dense",
       },
     },
     MuiFab: {
       defaultProps: {
-        size: 'small',
+        size: "small",
       },
     },
     MuiTable: {
       defaultProps: {
-        size: 'small',
+        size: "small",
       },
     },
     MuiTextField: {
       defaultProps: {
-        margin: 'dense',
+        margin: "dense",
       },
     },
     MuiToolbar: {
       defaultProps: {
-        variant: 'dense',
+        variant: "dense",
       },
     },
   },
@@ -254,7 +258,4 @@ const theme = createTheme({
 theme.spacing(3);
 theme.spacing(4);
 
-
-
 export default theme;
-
