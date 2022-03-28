@@ -2,16 +2,16 @@ import { Box, Grid, ThemeProvider } from "@mui/material";
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-import AdminPortalTheme from "./theme/AdminPortalTheme";
-import MPFAPortalTheme from "./theme/MPFAPortalTheme";
-import TrusteePortalTheme from "./theme/TrusteePortalTheme";
+import adminPortalTheme from "./theme/adminPortalTheme";
+import mpfaPortalTheme from "./theme/mpfaPortalTheme";
+import trusteePortalTheme from "./theme/trusteePortalTheme";
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider theme={TrusteePortalTheme}>
+    <ThemeProvider theme={trusteePortalTheme}>
       <App />
     </ThemeProvider>
-    <ThemeProvider theme={MPFAPortalTheme}>
+    <ThemeProvider theme={mpfaPortalTheme}>
       <Box sx={{ paddingTop: 1, paddingLeft: 2, typography: "h1" }}>
         MPFA Portal
       </Box>
@@ -428,7 +428,7 @@ ReactDOM.render(
         </Grid>
       </Grid>
     </ThemeProvider>
-    <ThemeProvider theme={AdminPortalTheme}>
+    <ThemeProvider theme={adminPortalTheme}>
       <br></br>
       <br></br>
       <br></br>

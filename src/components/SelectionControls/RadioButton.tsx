@@ -1,7 +1,7 @@
 import Radio, { RadioProps } from "@mui/material/Radio";
 import { styled } from "@mui/material/styles";
 import * as React from "react";
-import TrusteePortalTheme from "../../theme/TrusteePortalTheme";
+import trusteePortalTheme from "../../theme/trusteePortalTheme";
 
 const BpIcon = styled("span")(({ theme }) => ({
   borderRadius: "50%",
@@ -22,7 +22,7 @@ const BpIcon = styled("span")(({ theme }) => ({
 }));
 
 const BpCheckedIcon = styled(BpIcon)({
-  backgroundColor: TrusteePortalTheme.palette.primary.main,
+  backgroundColor: trusteePortalTheme.palette.primary.main,
   backgroundImage: "linear-gradient(180deg,hsla(0,0%,0%,.1),hsla(0,0%,100%,0))",
   "&:before": {
     display: "block",
@@ -32,7 +32,7 @@ const BpCheckedIcon = styled(BpIcon)({
     content: '""',
   },
   "input:hover ~ &": {
-    backgroundColor: TrusteePortalTheme.palette.primary.main,
+    backgroundColor: trusteePortalTheme.palette.primary.main,
   },
 });
 

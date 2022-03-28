@@ -1,23 +1,5 @@
 import { createTheme } from "@mui/material/styles";
 
-declare module "@mui/material/styles" {
-  interface Theme {
-    newProp1: {
-      main: string;
-      light: string;
-      primary?: string;
-    };
-  }
-  // allow configuration using `createTheme`
-  interface ThemeOptions {
-    newProp1?: {
-      main: string;
-      light: string;
-      primary?: string;
-    };
-  }
-}
-
 declare module "@mui/material/styles/createPalette" {
   interface SimplePaletteColorOptions {
     title?: string;
@@ -32,7 +14,7 @@ declare module "@mui/material/styles/createPalette" {
   }
 }
 
-const MPFAPortalTheme = createTheme({
+const mpfaPortalTheme = createTheme({
   palette: {
     primary: {
       main: "#E67E23",
@@ -148,11 +130,6 @@ const MPFAPortalTheme = createTheme({
       color: "#F6354A",
     },
   },
-  newProp1: {
-    main: "#E67E23",
-    primary: "#E67E23",
-    light: "#4B5CA5",
-  },
   breakpoints: {
     values: {
       xs: 0,
@@ -189,7 +166,6 @@ const MPFAPortalTheme = createTheme({
       },
       styleOverrides: {
         sizeSmall: {
-          // Adjust spacing to reach minimal touch target hitbox
           marginLeft: 4,
           marginRight: 4,
           padding: 12,
@@ -242,19 +218,13 @@ const MPFAPortalTheme = createTheme({
       shortest: 150,
       shorter: 200,
       short: 250,
-      // most basic recommended timing
       standard: 300,
-      // this is to be used in complex animations
       complex: 375,
-      // recommended when something is entering screen
       enteringScreen: 225,
-      // recommended when something is leaving screen
       leavingScreen: 195,
     },
   },
   spacing: 10,
 });
-MPFAPortalTheme.spacing(3);
-MPFAPortalTheme.spacing(4);
 
-export default MPFAPortalTheme;
+export default mpfaPortalTheme;

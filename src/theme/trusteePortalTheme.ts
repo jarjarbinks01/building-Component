@@ -1,30 +1,18 @@
 import { createTheme } from "@mui/material/styles";
 
-declare module "@mui/material/styles" {
-  interface Theme {
-    newProp1: {
-      main: string;
-      light: string;
-      primary?: string;
-    };
-  }
-  // allow configuration using `createTheme`
-  interface ThemeOptions {
-    newProp1?: {
-      main: string;
-      light: string;
-      primary?: string;
-    };
-  }
-}
-
 declare module "@mui/material/styles/createPalette" {
   interface SimplePaletteColorOptions {
     title?: string;
   }
 
+  interface Palette {
+    primaryButtonColor1: Palette["primary"];
+    primaryButtonColor2: Palette["primary"];
+    secondaryButtonColor1: Palette["primary"];
+    secondaryButtonColor2: Palette["primary"];
+    secondaryButtonColor3: Palette["primary"];
+  }
   interface PaletteOptions {
-    additionalColor6?: PaletteColorOptions;
     primaryButtonColor1?: PaletteColorOptions;
     primaryButtonColor2?: PaletteColorOptions;
     secondaryButtonColor1?: PaletteColorOptions;
@@ -33,13 +21,12 @@ declare module "@mui/material/styles/createPalette" {
   }
 }
 
-const AdminPortalTheme = createTheme({
+const trusteePortalTheme = createTheme({
   palette: {
     primary: {
       main: "#009CCD",
-      light: "#0D6A88",
+      light: "#4B5CA5",
       contrastText: "#ffffff",
-      title: "#ffffff",
     },
     secondary: {
       main: "#EF841F",
@@ -47,6 +34,7 @@ const AdminPortalTheme = createTheme({
     },
     success: {
       main: "#2FCC71",
+      light: "#CF2E76",
       contrastText: "#ffffff",
     },
     warning: {
@@ -54,9 +42,9 @@ const AdminPortalTheme = createTheme({
       contrastText: "#ffffff",
     },
     info: {
-      main: "#777777",
-      light: "#ED562D",
-      dark: "#EF9F1F",
+      main: "#f06363",
+      light: "#bcbcbc",
+      dark: "#9d4de1",
     },
     text: {
       primary: "#3d4f76",
@@ -65,10 +53,6 @@ const AdminPortalTheme = createTheme({
     background: {
       default: "#f3f9f9",
       paper: "#ffffff",
-    },
-    additionalColor6: {
-      main: "#FFCE00",
-      contrastText: "#333333",
     },
     primaryButtonColor1: {
       main: "#EF841F",
@@ -152,11 +136,6 @@ const AdminPortalTheme = createTheme({
       color: "#F6354A",
     },
   },
-  newProp1: {
-    main: "#E67E23",
-    primary: "#E67E23",
-    light: "#4B5CA5",
-  },
   breakpoints: {
     values: {
       xs: 0,
@@ -193,7 +172,6 @@ const AdminPortalTheme = createTheme({
       },
       styleOverrides: {
         sizeSmall: {
-          // Adjust spacing to reach minimal touch target hitbox
           marginLeft: 4,
           marginRight: 4,
           padding: 12,
@@ -246,19 +224,13 @@ const AdminPortalTheme = createTheme({
       shortest: 150,
       shorter: 200,
       short: 250,
-      // most basic recommended timing
       standard: 300,
-      // this is to be used in complex animations
       complex: 375,
-      // recommended when something is entering screen
       enteringScreen: 225,
-      // recommended when something is leaving screen
       leavingScreen: 195,
     },
   },
   spacing: 10,
 });
-AdminPortalTheme.spacing(3);
-AdminPortalTheme.spacing(4);
 
-export default AdminPortalTheme;
+export default trusteePortalTheme;
