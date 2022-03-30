@@ -13,7 +13,7 @@ export interface DropDownAutoCompleteProps {
   value: string | null;
   onChange: (
     event: React.SyntheticEvent<Element, Event>,
-    value: unknown,
+    value: string | null,
     reason: AutocompleteChangeReason,
     details?: AutocompleteChangeDetails<unknown> | undefined
   ) => void;

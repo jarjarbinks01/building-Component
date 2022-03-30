@@ -1,4 +1,4 @@
-import { IconButton, styled, Tooltip } from "@mui/material";
+import { IconButton, styled, Tooltip, TooltipProps } from "@mui/material";
 import React from "react";
 import { FloatingIconButtonProps } from "./FloatingIconButton.types";
 
@@ -10,7 +10,7 @@ const StyledIconButton = styled(IconButton)`
 
 const IconImage = styled("img")``;
 
-const StyledTooltip = styled((props: any) => (
+const StyledTooltip = styled((props: TooltipProps) => (
   <Tooltip classes={{ popper: props.className }} {...props} />
 ))`
   & .MuiTooltip-tooltip {

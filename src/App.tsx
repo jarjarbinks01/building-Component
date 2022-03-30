@@ -81,7 +81,7 @@ function App() {
       ApplicationType: "",
       date: null,
       scheme: null,
-      filterProps: undefined,
+      filterProps: [],
     },
     validationSchema: Yup.object({
       refNo: Yup.string().min(5, "Must be 5 characters at least"),
@@ -202,7 +202,7 @@ function App() {
                     label={"Select MPF Scheme"}
                     id={"dropdownWithSearch"}
                     value={formik.values.scheme}
-                    onChange={(event: any, newValue: any) => {
+                    onChange={(event: any, newValue: string | null) => {
                       formik.setFieldValue("scheme", newValue);
                     }}
                     options={mPFScheme.map((option) => option.title)}
@@ -216,7 +216,7 @@ function App() {
                     placeholder={"Please Input"}
                     label={"Dropdown with switch"}
                     value={formik.values.filterProps}
-                    onChange={(event: any, newValue: any) => {
+                    onChange={(event: any, newValue: string[] | null) => {
                       formik.setFieldValue("filterProps", newValue);
                     }}
                   />

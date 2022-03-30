@@ -2,13 +2,13 @@ import { Box, Grid, ThemeProvider } from "@mui/material";
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
+import themes from "./theme";
 import adminPortalTheme from "./theme/adminPortalTheme";
 import mpfaPortalTheme from "./theme/mpfaPortalTheme";
-import trusteePortalTheme from "./theme/trusteePortalTheme";
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider theme={trusteePortalTheme}>
+    <ThemeProvider theme={themes.adminPortal}>
       <App />
     </ThemeProvider>
     <ThemeProvider theme={mpfaPortalTheme}>

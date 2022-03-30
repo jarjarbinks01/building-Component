@@ -87,7 +87,7 @@ export default function DropDownWithSwitch({
         disableCloseOnSelect
         renderOption={(props, option, { selected }) => (
           <li {...props}>
-            <StyledSwitch {...label} checked={selected} />
+            <StyledSwitch checked={selected} name={option} />
             <StyledText>{option}</StyledText>
           </li>
         )}
