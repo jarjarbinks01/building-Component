@@ -21,6 +21,7 @@ import {
   DatePickerCommon,
   DropDownAutoComplete,
   DropDownWithSwitch,
+  ErrorDialog,
   Footer,
   Navbar,
   OutlineButtonRec107,
@@ -226,6 +227,30 @@ function App() {
                     id="test filter"
                     text="SEARCH"
                     onClick={() => console.log("search")}
+                  />
+                </Grid>
+                <Grid item xs={5} sm={9} p={1}>
+                  <ErrorDialog
+                    id="AccessDenied"
+                    title="Access Denied"
+                    message="Access denied. You do not have permission to access."
+                    text="Open Access Denied Modal"
+                  />
+                </Grid>
+                <Grid item xs={5} sm={9} p={1}>
+                  <ErrorDialog
+                    id="SessionTimeout"
+                    title="Session Expired"
+                    message="Your session has expired. Please login again."
+                    text="Open Session Timeout Modal"
+                  />
+                </Grid>
+                <Grid item xs={5} sm={9} p={1}>
+                  <ErrorDialog
+                    id="MultipleSessions"
+                    title="Multiple Sessions"
+                    message="An existing session has been detected using the same login credentials."
+                    text="Open Multiple Sessions Modal"
                   />
                 </Grid>
               </Grid>

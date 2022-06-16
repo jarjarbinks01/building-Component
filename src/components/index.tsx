@@ -1,4 +1,5 @@
 import Accordions from "./Accordion/Accordions";
+import ErrorDialog from "./Alert/ErrorDialog";
 import ArrowButtonMPFA from "./Buttons/ArrowButtonMPFA";
 import ArrowButtonTrustee from "./Buttons/ArrowButtonTrustee";
 import ButtonCom371 from "./Buttons/ButtonCom371";
@@ -11,7 +12,6 @@ import OutlineButtonRec107 from "./Buttons/OutlineButtonRec107";
 import OutlineButtonSave from "./Buttons/OutlineButtonSave";
 import SearchButton from "./Buttons/SearchButton";
 import Footer from "./Footer/Footer";
-import BasicDateRangePicker from "./Input/BasicDateRangePicker";
 import DatePickerCommon from "./Input/DatePickerCommon";
 import DropDownAutoComplete from "./Input/DropDownAutoComplete";
 import DropDownWithSwitch from "./Input/DropDownWithSwitch";
@@ -36,7 +36,6 @@ export {
   TextFields,
   SelectField,
   DatePickerCommon,
-  BasicDateRangePicker,
   Footer,
   OutlineButtonClear,
   ButtonCTAWithIcon,
@@ -44,4 +43,5 @@ export {
   DropDownAutoComplete,
   ArrowButtonTrustee,
   DropDownWithSwitch,
+  ErrorDialog,
 };
